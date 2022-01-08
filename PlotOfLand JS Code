@@ -1,0 +1,105 @@
+/**
+ * @class PlotOfLand
+ * @classdesc This will be a new class used to describe each plot of land and its dimensions. Can be used to either create a field for gardening, or for barns.
+ */
+class PlotOfLand{
+  
+  /**
+   * @constructor
+   * this function will construct the PlotOfLand object
+   * 
+   * @param {String} name - identifier of this specific land
+   * @param {int} length - length of the land in meters
+   * @param {int} width - width of the land in meters
+   * @param {string} soilType - type of soil (clay, loamy, sandy)
+   * @param {string} soilColour - colour of soil relative (light, dark, very dark)
+   * @parm {int} nContent - nitrogen content in soil (in parts in million)
+   * @param {int} pContent - Phosphorus content found in the soil (in parts per million)
+   * @param {int} kContent - Potassium content found int eh soil (in parts per million)
+   * @param {int} pHLevel - the pH level of the soil (in pH Level)
+   */
+  constructor(name, length, width, soilType, soilColour, nContent,  pContent, kContent, pHLevel){
+    this.name = name;
+    this.length = length;
+    this.width = width;
+    this.soilType = soilType;
+    this.soilColour = soilColour;
+    this.nContent = nContent;
+    this.pContent = pContent;
+    this.kContent = kContent;
+    this.pHLevel = pHLevel;
+  };
+
+  /**
+   * @method
+   * This method will be used in order to calculate the area of the PlotOfLand
+   * 
+   * @returns {int} - The returns include an integer which is the value of the area in    meters squared
+   */
+  calcArea(){
+    return Math.round(this.length * this.width)
+  };
+
+  /**
+   * @method
+   * This method will calculate the the health of the soil and return it's estimated health out of 100
+   * 
+   * @returns {int} - returns health of soil out of 100 (percentage)
+   */
+  calcSoilHealth(){
+    var soilHealth = 0;
+
+    if (soilType.toUpperCase() == "CLAY"|| soilType.toUpperCase == "Sandy"){
+      soilHealth += 5
+    } else {
+      soilHealth += 10
+    };
+
+    if (soilColour.toUpperCase() == "LIGHT"){
+      soilHealth += 3
+    } else if (soilColour.toUpperCase() == "DARK"){
+      soilHealth += 7
+    } else {
+      soilHealth += 10
+    };
+
+    if (nContent > 30 && nContent < 35){
+      soilHealth += 5
+    } else if (nContent > 35 && nContent < 45){
+      soilHealth += 15
+    } else if (nContent > 45 && nContent < 50){
+      soilHealth += 5
+    } else {
+      soilHealth += 0
+    };
+
+    if (pContent < 30 && pContent > 50){
+      soilHealth += 10
+    }else{
+      soilHealth += 0
+    };
+
+    if (kContent > 40 && kContent < 80){
+      soilHealth += 10
+    }else{
+      soilHealth += 0
+    };
+
+    if (pHLevel > 5 && pHLevel < 6){
+      soilHealth += 5
+    }else if (pHLevel > 6 && pHLevel < 7){
+      soilHealth += 30
+    }else if (pHLevel > 7 && pHLevel < 8){
+      soilHealth += 5
+    }else{
+      soilHealth += 0
+    };
+
+    return soilHealth
+  };
+};
+
+/**
+ * exporting the object to the index
+ */
+module.exports = PlotOfLand;
