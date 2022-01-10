@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Manage Your Soil and Farm Land From Anywhere</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="images/logo2.png">
+    <style>
+      .logo {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        height: 80px;
+        width: auto;
+        z-index: 100;
+      }
+      .login {
+        position: fixed;
+        top: 15px;
+        right: 300px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+      .login:hover {
+        text-decoration: underline;
+      }
+      .signup {
+        position: fixed;
+        top: 15px;
+        right: 185px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+      .signup:hover {
+        text-decoration: underline;
+      }
+      .community {
+        position: fixed;
+        top: 15px;
+        right: 50px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+      .community:hover {
+        text-decoration: underline;
+      }
+      .about {
+        position: fixed;
+        top: 15px;
+        right: 400px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+      .about:hover {
+        text-decoration: underline;
+      }
+      .topRectangle {
+        position: fixed;
+        top: 0;
+        left: 0px;
+        width: 100%;
+        height: 100px;
+        background-color: #355E3B;
+        z-index: 20;
+      }
+      .titleRectangle {
+        position: absolute;
+        top: 0;
+        left: 0px;
+        width: 100%;
+        height: 400px;
+        background-color: #9acd32;
+        z-index: 2;
+      }
+      h1 {
+        position: relative;
+        top: 100px;
+        font-size: 60px;
+        font-family: Verdana;
+        color: black;   
+        text-align: center;
+        z-index: 3;
+      }
+      h2 {
+        position: relative;
+        top: 100px;
+        font-size: 30px;
+        font-family: Verdana;
+        color: black;
+        text-align: center;
+        z-index: 4;
+      }
+      .introParagraphTitle {
+        position: absolute;
+        top: 200px;
+        left: 20px;
+        font-size: 26px;
+        font-family: Verdana;
+        color: black;
+        text-align: left;
+        z-index: 5;
+      }
+      .introParagraph {
+        position: absolute;
+        top: 250px;
+        left: 20px;
+        font-size: 20px;
+        font-family: Verdana;
+        font-weight: normal;
+        color: black;
+        text-align: left;
+        z-index: 6;
+        width: 50%;
+      }
+      .p1Image {
+        position: absolute;
+        top: 110px;
+        right: 0px;
+        width: 45%;
+        height: auto;
+      }
+      .benefit1 {
+        position: absolute;
+        top: 750px;
+        right: 20px;
+        font-size: 26px;
+        font-family: Verdana;
+        color: black;
+        text-align: right;
+        z-index: 7;
+      }
+      .benefit1Para {
+        position: absolute;
+        top: 800px;
+        right: 20px;
+        font-size: 20px;
+        font-family: Verdana;
+        font-weight: normal;
+        color: black;
+        text-align: right;
+        z-index: 8;
+        width: 48%;
+      }
+      .p2Image {
+        position: absolute;
+        top: 650px;
+        left: 0px;
+        width: 45%;
+        height: auto;
+        z-index: 10;
+      }
+      .benefit2 {
+        position: absolute;
+        top: 1280px;
+        left: 20px;
+        font-size: 26px;
+        font-family: Verdana;
+        color: black;
+        text-align: left;
+        z-index: 11;
+      }
+      .benefit2Para {
+        position: absolute;
+        top: 1330px;
+        left: 20px;
+        font-size: 20px;
+        font-family: Verdana;
+        font-weight: normal;
+        color: black;
+        text-align: left;
+        z-index: 12;
+        width: 48%;
+      }
+      .p3Image {
+        position: absolute;
+        top: 1180px;
+        right: 0px;
+        width: 45%;
+        height: 350px;
+        object-fit: cover;
+        z-index: 13;
+      }
+      .image4 {
+        position: absolute;
+        top: 1680px;
+        width: 100%;
+        height: 550px;
+        left: 0px;
+        object-fit: cover;
+        opacity: 0.6;
+        filter: brightness(50%);
+        z-index: 199;
+      }
+      .footerText {
+        position: absolute;
+        top: 1680px;
+        font-size: 80px;
+        font-family: Verdana;
+        color: white;
+        text-align: center;
+        left: 170px;
+        z-index: 200;
+      }
+      .footerText2 {
+        position: absolute;
+        top: 1870px;
+        font-size: 30px;
+        font-family: Verdana;
+        color: white;
+        text-align: center;
+        left: 30px;
+        z-index: 201;
+      }
+      .fbookLogo {
+        position: absolute;
+        top: 1990px;
+        height: 190px;
+        width: auto;
+        left: 130px;
+        z-index: 202;
+      }
+      .twtrLogo {
+        position: absolute;
+        top: 1960px;
+        height: 250px;
+        width: auto;
+        left: 500px;
+        z-index: 203;
+      }
+      .instLogo {
+        position: absolute;
+        top: 1980px;
+        height: 200px;
+        width: auto;
+        left: 900px;
+        z-index: 204;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="titleRectangle"></div>
+    <div class="topRectangle">
+      <a href="aboutUs.html">
+        <p class="about">About us</p>
+      </a>
+      <a href="login.html">
+        <p class="login">Log in</p>
+      </a>
+      <a href="signup.html">
+        <p class="signup">Sign up</p>
+      </a>
+      <a href="community.html">
+        <p class="community">Community</p>
+      </a>
+      <a href="index.html">
+        <img class="logo" src="images/logo.png">
+      </a>
+    </div>
+    <h1>Optimize your Soil Quality.</h1>
+    <h2>Use our free software to handle your farm and ensure you always get the best crops with the power of soil.<h2>
+    <img class="p1Image" src="images/p1Soil.jpg" align="right">
+    <img class="p2Image" src="images/p2Soil.jpg">
+    <img class="p3Image" src="images/p3Soil.jpg" align="right">
+    <img class="image4" src="images/image4.jpg">
+    <a href="https://www.facebook.com/profile.php" target="_blank">
+      <img class="fbookLogo" src="images/fbookLogo.png">
+    </a>
+    <a href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">
+      <img class="twtrLogo" src="images/twtrLogo.png">
+    </a>
+    <a href="https://www.instagram.com/instagram/?hl=en" target="_blank">
+      <img class="instLogo" src="images/instLogo.png">
+    </a>
+    <p class="introParagraphTitle">The #1 Tool for Sustainable Farming</p>
+    <p class="introParagraph">Soil is a crucial element for keeping a sustainable farm. We will monitor your farm and guide you on the path to optimizing your soil quality using various different methods depending on your field.</p>
+    <p class="benefit1">Easy to Start Up</p>
+    <p class="benefit1Para">Get started with our software by making an account. No need to pay, no need to download anything. Just access it straight from your browser and sign in.</p>
+    <p class="benefit2">Manage your Farm Stress-Free</p>
+    <p class="benefit2Para">Our software will be able to watch over your farm at all times, taking stress off your busy schedule and letting you focus on more important things in your life.</p>
+    <p class="footerText">Join the Community.</p>
+    <p class="footerText2">Stay up to date with the latest news through our social media outlets.</p>
+  </body>
+</html>
