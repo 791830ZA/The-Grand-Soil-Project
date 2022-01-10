@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>My Account</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="images/logo2.png">
+    <style>
+      .logo {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        height: 80px;
+        width: auto;
+        z-index: 100;
+      }
+      .newPlot {
+        position: fixed;
+        top: 15px;
+        right: 500px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+      .newPlot:hover {
+        text-decoration: underline;
+      }
+      .plot {
+        position: fixed;
+        top: 15px;
+        right: 370px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+      .plot:hover {
+        text-decoration: underline;
+      }
+      .account {
+        position: fixed;
+        top: 15px;
+        right: 225px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+      .account:hover {
+        text-decoration: underline;
+      }
+      .logout {
+        position: fixed;
+        top: 15px;
+        right: 110px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+      .logout:hover {
+        text-decoration: underline;
+      }
+      .topRectangle {
+        position: fixed;
+        top: 0;
+        left: 0px;
+        width: 100%;
+        height: 100px;
+        background-color: #6B8E23;
+        z-index: 20;
+      }
+      .pfp {
+        position: absolute;
+        top: 130px;
+        height: 250px;
+        width: 250px;
+        left: 20px;
+        border: 5px solid green;
+        border-radius: 500px;
+      }
+      .name {
+        position: absolute;
+        top: 155px;
+        font-size: 50px;
+        font-weight: bold;
+        left: 350px;
+        font-family: Verdana;
+      }
+      .message {
+        position: absolute;
+        top: 255px;
+        font-size: 20px;
+        left: 350px;
+        font-family: Verdana; 
+      }
+      label[for=email] {
+        position: absolute;
+        top: 420px;
+        left: 20px;
+        font-family: Verdana;
+        font-size: 30px;
+      }
+      label[for=firstName] {
+        position: absolute;
+        top: 540px;
+        left: 20px;
+        font-family: Verdana;
+        font-size: 30px;
+      }
+      label[for=lastName] {
+        position: absolute;
+        top: 660px;
+        left: 20px;
+        font-family: Verdana;
+        font-size: 30px;
+      }
+      label[for=birthday] {
+        position: absolute;
+        top: 780px;
+        left: 20px;
+        font-family: Verdana;
+        font-size: 30px;
+      }
+      label[for=uname] {
+        position: absolute;
+        top: 900px;
+        left: 20px;
+        font-family: Verdana;
+        font-size: 30px;
+      }
+      label[for=password] {
+        position: absolute;
+        top: 1020px;
+        left: 20px;
+        font-family: Verdana;
+        font-size: 30px;
+      }
+      input[type=email] {
+        position: absolute;
+        top: 460px;
+        left: 20px;
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+      input[name=firstName] {
+        position: absolute;
+        top: 580px;
+        left: 20px;
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+      input[name=lastName] {
+        position: absolute;
+        top: 700px;
+        left: 20px;
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+      input[type=date] {
+        position: absolute;
+        top: 820px;
+        left: 20px;
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+      input[type=uname] {
+        position: absolute;
+        top: 940px;
+        left: 20px;
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+      input[type=password] {
+        position: absolute;
+        top: 1060px;
+        left: 20px;
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+      .saveButton {
+        position: absolute;
+        top: 1150px;
+        left: 200px;
+        width: 240px;
+        height: 80px;
+        border-radius: 20px;
+        background-color: purple;
+      }
+      .saveText {
+        position: absolute;
+        top: -7px;
+        left: 80px;
+        font-size: 30px;
+        color: white;
+        font-family: Verdana;
+      }
+      .footer {
+        position: absolute;
+        top: 1250px;
+        width: 50%;
+        height: 20px;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topRectangle">
+      <a href="newPlot.html">
+        <p class="newPlot">Create new plot</p>
+      </a>
+      <a href="myPlots.html">
+        <p class="plot">My plots</p>
+      </a>
+      <a href="myAccount.html">
+        <p class="account">My account</p>
+      </a>
+      <a href="index.html">
+        <p class="logout">Log out</p>
+      <a href="mainMenu.html">
+        <img class="logo" src="images/logo.png">
+      </a>
+    </div>
+    <img class="pfp" src="images/pfp.png">
+    <p class="name">Hello, User!</p>
+    <p class="message">Edit your profile information here.</p>
+    <form>
+      <label for="email">Email:</label><br>
+      <input type="email" id = "email" name="email"><br>
+      <label for="firstName">First Name:</label><br>
+      <input type="text" id = "firstName" name="firstName"><br>
+      <label for="lastName">Last Name:</label><br>
+      <input type="text" id = "lastName" name="lastName"><br>
+      <label for="birthday">Date of Birth:</label><br>
+      <input type="date" id="birthday" name="birthday"><br>
+      <label for="uname">Username:</label><br>
+      <input type="uname" id="uname" name="uname"><br>
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password">
+    </form>
+    <div class="saveButton">
+      <a href="myAccount.html">
+        <p class="saveText">Save</p>
+      </a>
+    </div>
+    <div class="footer"></div>
+  </body>
+</html>
