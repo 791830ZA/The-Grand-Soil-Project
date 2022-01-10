@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Create New Plot</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="images/logo2.png">
+    <style>
+      .logo {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        height: 80px;
+        width: auto;
+        z-index: 100;
+      }
+      .newPlot {
+        position: fixed;
+        top: 15px;
+        right: 500px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+      .newPlot:hover {
+        text-decoration: underline;
+      }
+      .plot {
+        position: fixed;
+        top: 15px;
+        right: 370px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+      .plot:hover {
+        text-decoration: underline;
+      }
+      .account {
+        position: fixed;
+        top: 15px;
+        right: 225px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+      .account:hover {
+        text-decoration: underline;
+      }
+      .logout {
+        position: fixed;
+        top: 15px;
+        right: 110px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+      .logout:hover {
+        text-decoration: underline;
+      }
+      .topRectangle {
+        position: fixed;
+        top: 0;
+        left: 0px;
+        width: 100%;
+        height: 100px;
+        background-color: #6B8E23;
+        z-index: 20;
+      }
+      .Q1 {
+        position: absolute;
+        top: 110px;
+        left: 20px;
+        font-size: 30px;
+        font-family: Verdana;
+      }
+      label[for="n"] {
+        position: absolute;
+        top: 200px;
+        left: 60px;
+        font-size: 20px;
+        font-family: Verdana;  
+      }
+      input[id="n"] {
+        position: absolute;
+        top: 200px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+      label[for="k"] {
+        position: absolute;
+        top: 230px;
+        left: 60px; 
+        font-size: 20px;
+        font-family: Verdana; 
+      }
+      input[id="k"] {
+        position: absolute;
+        top: 230px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+      label[for="p"] {
+        position: absolute;
+        top: 260px;
+        left: 60px;  
+        font-size: 20px;
+        font-family: Verdana; 
+      }
+      input[id="p"] {
+        position: absolute;
+        top: 260px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+      label[for="mg"] {
+        position: absolute;
+        top: 290px;
+        left: 60px;  
+        font-size: 20px;
+        font-family: Verdana; 
+      }
+      input[id="mg"] {
+        position: absolute;
+        top: 290px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+      label[for="ca"] {
+        position: absolute;
+        top: 320px;
+        left: 60px;
+        font-size: 20px;
+        font-family: Verdana;   
+      }
+      input[id=ca] {
+        position: absolute;
+        top: 320px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+      .Q2 {
+        position: absolute;
+        top: 420px;
+        left: 20px;
+        font-size: 30px;
+        font-family: Verdana;
+      }
+      label[for="light"] {
+        position: absolute;
+        top: 510px;
+        left: 60px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      input[id="light"] {
+        position: absolute;
+        top: 510px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+      label[for="dark"] {
+        position: absolute;
+        top: 540px;
+        left: 60px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      input[id="dark"] {
+        position: absolute;
+        top: 540px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+      label[for="vDark"] {
+        position: absolute;
+        top: 570px;
+        left: 60px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      input[id="vDark"] {
+        position: absolute;
+        top: 570px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+      .Q3 {
+        position: absolute;
+        top: 670px;
+        left: 20px;
+        font-size: 30px;
+        font-family: Verdana;
+      }
+      .pH {
+        position: absolute;
+        top: 780px;
+        left: 20px;
+        width: 480px;
+      }
+      .slider {
+        width: 100%;
+      }
+      .amount {
+        font-size: 20px;
+        left: 100px;
+        font-family: Verdana;
+      }
+      .Q4 {
+        position: absolute;
+        top: 880px;
+        left: 20px;
+        font-size: 30px;
+        font-family: Verdana;
+      }
+      label[for="pestAmount"] {
+        position: absolute;
+        top: 970px;
+        left: 100px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      input[id="pestAmount"] {
+        position: absolute;
+        top: 970px;
+        left: 20px;
+        width: 60px;
+        height: 20px;
+      }
+      .Q5 {
+        position: absolute;
+        top: 1070px;
+        left: 20px;
+        font-size: 30px;
+        font-family: Verdana;
+      }
+      label[for="pyre"] {
+        position: absolute;
+        top: 1160px;
+        left: 60px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      input[id="pyre"] {
+        position: absolute;
+        top: 1160px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+      label[for="ortho"] {
+        position: absolute;
+        top: 1190px;
+        left: 60px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      input[id="ortho"] {
+        position: absolute;
+        top: 1190px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+      label[for="nat"] {
+        position: absolute;
+        top: 1220px;
+        left: 60px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      input[id="nat"] {
+        position: absolute;
+        top: 1220px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+      .Q6 {
+        position: absolute;
+        top: 1320px;
+        left: 20px;
+        font-size: 30px;
+        font-family: Verdana;
+      }
+      label[for="cont"] {
+        position: absolute;
+        top: 1410px;
+        left: 60px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      input[id="cont"] {
+        position: absolute;
+        top: 1410px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+      label[for="marit"] {
+        position: absolute;
+        top: 1440px;
+        left: 60px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      input[id="marit"] {
+        position: absolute;
+        top: 1440px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+      label[for="arct"] {
+        position: absolute;
+        top: 1490px;
+        left: 60px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      input[id="arct"] {
+        position: absolute;
+        top: 1490px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+      label[for="trop"] {
+        position: absolute;
+        top: 1520px;
+        left: 60px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      input[id="trop"] {
+        position: absolute;
+        top: 1520px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+      .Q7 {
+        position: absolute;
+        top: 1620px;
+        left: 20px;
+        font-size: 30px;
+        font-family: Verdana;
+      }
+      label[for="water"] {
+        position: absolute;
+        top: 1710px;
+        left: 100px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      input[id="water"] {
+        position: absolute;
+        top: 1710px;
+        left: 20px;
+        width: 60px;
+        height: 20px;
+      }
+      .submit {
+        position: absolute;
+        top: 1800px;
+        left: 20px;
+        width: 200px;
+        height: 80px;
+        border-radius: 10px;
+        background-color: green;
+      }
+      .submitText {
+        position: absolute;
+        top: -5px;
+        left: 45px;
+        font-size: 30px;
+        font-family: Verdana;
+        color: white;
+      }
+      .footer {
+        position: absolute;
+        top: 1900px;
+        width: 50%;
+        height: 20px;
+        bakcground-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topRectangle">
+      <a href="newPlot.html">
+        <p class="newPlot">Create new plot</p>
+      </a>
+      <a href="myPlots.html">
+        <p class="plot">My plots</p>
+      </a>
+      <a href="myAccount.html">
+        <p class="account">My account</p>
+      </a>
+      <a href="index.html">
+        <p class="logout">Log out</p>
+      <a href="mainMenu.html">
+        <img class="logo" src="images/logo.png">
+      </a>
+    </div>
+    <p class="Q1">1. What nutrients are present in your soil?</p>
+    <form>
+      <label class="n" for="n">Nitrogen</label>
+      <input type="checkbox" id="n" name="n">
+      <label class="k" for="k">Potassium</label>
+      <input type="checkbox" id="k" name="k">
+      <label class="p" for="p">Phosphorus</label>
+      <input type="checkbox" id="p" name="p">
+      <label class="mg" for="mg">Magnesium</label>
+      <input type="checkbox" id="mg" name="mg">
+      <label type="ca" for="ca">Calcium</label>
+      <input type="checkbox" id="ca" name="ca">
+    </form>
+    <p class="Q2">2. How dark is your soil?</p>
+    <form>
+      <label class="light" for="light">Light</label>
+      <input type="radio" id="light" name="soilColor" value="light">
+      <label class="dark" for="dark">Dark</label>
+      <input type="radio" id="dark" name="soilColor" value="dark">
+      <label class="vDark" for="vDark">Very dark</label>
+      <input type="radio" id="vDark" name="soilColor" value="vDark">
+    </form>
+    <p class="Q3">3. What is the pH of your soil?</p>
+    <div class="pH">
+      <input type="range" class="slider" id="range" name="range" min="0" max="14" step="0.1" value="7.0" oninput="this.nextElementSibling.value = this.value">
+      <output class="amount" id="amount" name="amount" for="range">7</output>
+    </div>
+    <p class="Q4">4. How much pesticide do you use on your plot per year?</p>
+    <form>
+      <label class="pestAmount" for="pestAmount">lbs/acre</label>
+      <input type="number" step="any" id="pestAmount" name="pestAmount">
+    </form>
+    <p class="Q5">5. What kind of pesticide do you use?</p>
+    <form>
+      <label class="pyre" for="pyre">Pyrethroids</label>
+      <input type="radio" id="pyre" name="pestType" value="pyre">
+      <label class="ortho" for="ortho">Orthophosphates</label>
+      <input type="radio" id="ortho" name="pestType" value="ortho">
+      <label class="nat" for="nat">Natural pesticides</label>
+      <input type="radio" id="nat" name="pestType" value="nat">
+    </form>
+    <p class="Q6">6. Describe the climate of your area.</p>
+    <form>
+      <label class="cont" for="cont">Continental</label>
+      <input type="radio" id="cont" name="climate1" value="cont">
+      <label class="marit" for="marit">Maritime</label>
+      <input type="radio" id="marit" name="climate1" value="cont">
+      <label class="arct" for="arct">Arctic</label>
+      <input type="radio" id="arct" name="climate2" value="arct">
+      <label class="trop" for="trop">Tropical</label>
+      <input type="radio" id="trop" name="climate2" value="trop">
+    </form>
+    <p class="Q7">7. How much nearby water is there at your plot?</p>
+    <form>
+      <label class="water" for="water">square kilometres</label>
+      <input type="number" step="any" id="water" name="water">
+    </form>
+    <div class="submit">
+      <a href="plot.html">
+        <p class="submitText">Submit</p>
+      </a>
+    </div>
+    <div class="footer"></div>
+  </body>
+</html>
