@@ -220,6 +220,90 @@
         font-size: 20px;
         font-family: Verdana;
       }
+      .Q4 {
+        position: absolute;
+        top: 1070px;
+        left: 20px;
+        font-size: 30px;
+        font-family: Verdana;
+      }
+      input[id=length] {
+        position: absolute;
+        top: 1160px;
+        left: 220px;
+        width: 100px;
+        height: 20px;
+      }
+      label[for=length] {
+        position: absolute;
+        top: 1160px;
+        left: 20px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      input[id=width] {
+        position: absolute;
+        top: 1210px;
+        left: 220px;
+        width: 100px;
+        height: 20px;
+      }
+      label[for=width] {
+        position: absolute;
+        top: 1210px;
+        left: 20px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      .Q5 {
+        position: absolute;
+        top: 1310px;
+        left: 20px;
+        font-size: 30px;
+        font-family: Verdana;
+      }
+      input[id=nContent] {
+        position: absolute;
+        top: 1400px;
+        left: 240px;
+        width: 100px;
+        height: 20px;
+      }
+      label[for=nContent] {
+        position: absolute;
+        top: 1400px;
+        left: 20px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      input[id=pContent] {
+        position: absolute;
+        top: 1450px;
+        left: 240px;
+        width: 100px;
+        height: 20px;
+      }
+      label[for=pContent] {
+        position: absolute;
+        top: 1450px;
+        left: 20px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      input[id=kContent] {
+        position: absolute;
+        top: 1500px;
+        left: 240px;
+        width: 100px;
+        height: 20px;
+      }
+      label[for=kContent] {
+        position: absolute;
+        top: 1500px;
+        left: 20px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
       input[type=submit] {
         position: absolute;
         top: 1200px;
@@ -250,7 +334,7 @@
       </a>
     </div>
     <form id="soilSurvey">
-      <p class="Q1">What Type Of Soil Do You currently have?</p><br>
+      <p class="Q1">What type of soil do you currently have?</p><br>
       <input type="radio" id="clay" name="soilType" value = "Clay">
       <label for = "clay">Clay Soil</label><br>
       <input type = "radio" id = "loamy" name="soilType" value = "Loamy">
@@ -258,10 +342,10 @@
       <input type = "radio" id = "sandy" name = "soilType" value = "Sandy">
       <label for = "sandy">Sandy Soil</label><br>
       <a href = "https://www.gardenersworld.com/plants/find-out-your-soil-type/" target="_blank">
-        <p class="soilLink">Don't know what type your soil is, check how to test it right here!</p>
+        <p class="soilLink">Don't know what type your soil is? Check how to test it right here!</p>
       </a><br><br>
 
-      <p class="Q2">How Dark is Your soil?</p><br>
+      <p class="Q2">How dark is Your soil?</p><br>
       <input type = "radio" id = "veryDark" name="colour" value="Very Dark">
       <label for="veryDark"><img src="https://thumbs.dreamstime.com/b/dark-soil-as-very-nice-natural-background-29877018.jpg" alt="Very Dark Soil" style="width:100px;height:100px;"></label><br>
       <input type = "radio" id = "dark" name="colour" value="dark">
@@ -278,6 +362,20 @@
       <label for="tested">Yes</label><br>
       <input type="radio" id="notTested" name="test" value="false">
       <label for="notTested">No</label><br><br>
+
+      <p class="Q4">What are the dimensions of the field?</p>
+      <label for="length">Length (in meters):</label>
+      <input type="text" name="length" id="length"></input><br><br>
+      <label for="width">Width (in meters):</label>
+      <input type="text" name="width" id="width"></input><br><br>
+
+      <p class="Q5">Please specify the amount of each nutrient present in your farm.</p>
+      <label for="nContent">Nitrogen Content:</label>
+      <input type="text" id="nContent" name="nContent"></input><br><br>
+      <label for="pContent">Phosphorus Content:</label>
+      <input type="text" id="pContent" name="pContent"></input><br><br>
+      <label for="kContent">Potassium Content:</label>
+      <input type="text" id="kContent" name="kContent"></input><br><br>
 
       <input type="submit" value="Submit">
   </body>
