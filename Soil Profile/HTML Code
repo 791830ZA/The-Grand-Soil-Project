@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <form id="soilSurvey">
+
+      What Type Of Soil Do You currently have?<br>
+      <input type="radio" id="clay" name="soilType" value = "Clay">
+      <label for = "clay">Clay Soil</label><br>
+      <input type = "radio" id = "loamy" name="soilType" value = "Loamy">
+      <label for = "loamy">Loamy Soil</label><br>
+      <input type = "radio" id = "sandy" name = "soilType" value = "Sandy">
+      <label for = "sandy">Sandy Soil</label><br>
+      <a href = "https://www.gardenersworld.com/plants/find-out-your-soil-type/">Don't know what type your soil is, check how to test it right here!</a><br><br>
+
+      How Dark is Your soil?<br>
+      <input type = "radio" id = "veryDark" name="colour" value="Very Dark">
+      <label for="veryDark"><img src="https://thumbs.dreamstime.com/b/dark-soil-as-very-nice-natural-background-29877018.jpg" alt="Very Dark Soil" style="width:100px;height:100px;"></label><br>
+      <input type = "radio" id = "dark" name="colour" value="dark">
+      <label for="dark"><img src="https://image.shutterstock.com/image-photo/black-fresh-soil-groumd-abstract-260nw-1944985660.jpg" alt="Dark Soil" style="width:100px;height:100px;"></label><br>
+      <input type = "radio" id = "light" name="colour" value="light">
+      <label for="light"><img src="https://www.nature-and-garden.com/wp-content/uploads/sites/4/2017/10/garden-soil-type.jpg" alt="Light Soil" style="width:100px;height:100px;"></label><br><br>
+
+      Have you tested your soil for nutrients?<br>
+      <select id="selectBox" onchange="changeFunc();">
+        <option value="1">Option #1</option>
+        <option value="2">Option #2</option>
+      </select><br>
+      <input type="radio" id="tested" name="test" value="true">
+      <label for="tested">Yes</label><br>
+      <input type="radio" id="notTested" name="test" value="false">
+      <label for="notTested">No</label><br><br>
+
+
+
+
+      <label for = "fname">First Name:</label><br>
+      <input type="text" id="fname" name="fname"><br>
+
+      <input type="radio" id="html" name="fav_language" value="HTML">
+      <label for="html">HTML</label><br>
+      <input type="radio" id="css" name="fav_language" value="CSS">
+      <label for="css">CSS</label><br>
+      <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+      <label for="javascript">JavaScript</label><br>
+
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+      <label for="vehicle1"> I have a bike</label><br>
+      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+      <label for="vehicle2"> I have a car</label><br>
+      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+      <label for="vehicle3"> I have a boat</label><br>
+
+      <input type="text" id="lname" name="lname" value="Doe"><br><br>
+      <input type="submit" value="Submit">
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
