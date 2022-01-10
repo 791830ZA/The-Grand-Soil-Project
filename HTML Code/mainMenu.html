@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Main Menu - Soil Assistant</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="images/logo2.png">
+    <style>
+      .logo {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        height: 80px;
+        width: auto;
+        z-index: 100;
+      }
+      .newPlot {
+        position: fixed;
+        top: 15px;
+        right: 500px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+      .newPlot:hover {
+        text-decoration: underline;
+      }
+      .plot {
+        position: fixed;
+        top: 15px;
+        right: 370px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+      .plot:hover {
+        text-decoration: underline;
+      }
+      .account {
+        position: fixed;
+        top: 15px;
+        right: 225px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+      .account:hover {
+        text-decoration: underline;
+      }
+      .logout {
+        position: fixed;
+        top: 15px;
+        right: 110px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+      .logout:hover {
+        text-decoration: underline;
+      }
+      .topRectangle {
+        position: fixed;
+        top: 0;
+        left: 0px;
+        width: 100%;
+        height: 100px;
+        background-color: #6B8E23;
+        z-index: 20;
+      }
+      .title {
+        position: absolute;
+        top: 70px;
+        font-size: 80px;
+        font-family: Verdana;
+        font-weight: bold;
+        left: 120px;
+      }
+      .button1 {
+        position: absolute;
+        top: 320px;
+        left: 60px;
+        width: 500px;
+        height: 150px;
+        border-radius: 20px;
+        background-color: green;
+      }
+      .text1 {
+        position: absolute;
+        top: 10px;
+        left: 80px;
+        font-size: 40px;
+        font-family: Verdana;
+        color: white;
+      }
+      .button2 {
+        position: absolute;
+        top: 320px;
+        right: 60px;
+        width: 500px;
+        height: 150px;
+        border-radius: 20px;
+        background-color: orange;
+      }
+      .text2 {
+        position: absolute;
+        top: 10px;
+        left: 80px;
+        font-size: 40px;
+        font-family: Verdana;
+        color: white;
+      }
+      .update {
+        position: absolute;
+        top: 600px;
+        left: 0px;
+        width: 100%;
+        height: 430px;
+        background-color: #ADD8E6;
+      }
+      .updateVer {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        font-size: 30px;
+        font-family: Verdana;
+        font-weight: bold;
+      }
+      .detail1 {
+        position: absolute;
+        top: 100px;
+        left: 20px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      .detail2 {
+        position: absolute;
+        top: 160px;
+        left: 20px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      .detail3 {
+        position: absolute;
+        top: 220px;
+        left: 20px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      .detail4 {
+        position: absolute;
+        top: 280px;
+        left: 20px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      .detail5 {
+        position: absolute;
+        top: 340px;
+        left: 20px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      .updateImg {
+        position: absolute;
+        top: 600px;
+        width: 35%;
+        height: 430px;
+        object-fit: cover;
+        right: 0px; 
+      }
+      .news {
+        position: absolute;
+        top: 1130px;
+        right: 0px;
+        width: 60%;
+        height: 300px;
+        background-color: #9ACD32;
+      }
+      .newsTitle {
+        position: absolute;
+        top: 10px;
+        text-align: right;
+        right: 20px;
+        font-size: 30px;
+        font-family: Verdana;
+        font-weight: bold;
+      }
+      .newsMessg {
+        position: absolute;
+        top: 80px;
+        text-align: right;
+        right: 20px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      .news1 {
+        position: absolute;
+        top: 130px;
+        text-align: right;
+        right: 20px;
+        font-size: 20px;
+        font-family: Verdana;
+        color: white;
+      }
+      .news2 {
+        position: absolute;
+        top: 200px;
+        text-align: right;
+        right: 20px;
+        font-size: 20px;
+        font-family: Verdana;
+        color: white;
+      }
+      .newsPic {
+        position: absolute;
+        top: 1130px;
+        width: 40%;
+        height: 300px;
+        object-fit: cover;
+        left: 0px; 
+      }
+      .footer {
+        position: absolute;
+        top: 1450px;
+        width: 50%;
+        height: 20px;
+        bakcground-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="title">Welcome to Your Farm</p>
+    <div class="topRectangle">
+      <a href="newPlot.html">
+        <p class="newPlot">Create new plot</p>
+      </a>
+      <a href="myPlots.html">
+        <p class="plot">My plots</p>
+      </a>
+      <a href="myAccount.html">
+        <p class="account">My account</p>
+      </a>
+      <a href="index.html">
+        <p class="logout">Log out</p>
+      <a href="mainMenu.html">
+        <img class="logo" src="images/logo.png">
+      </a>
+    </div>
+    <div class="button1">
+      <a href="newPlot.html">
+        <p class="text1">Create new plot</p>
+      </a>
+    </div>
+    <div class="button2">
+      <a href="myPlots.html">
+        <p class="text2">Open saved plot</p>
+      </a>
+    </div>
+    <div class="update">
+      <p class="updateVer">Version 1.0: What's new?</p>
+      <p class="detail1">- Congratulations, you are using the first ever version of Soil Assistant!</p>
+      <p class="detail2">- Add your own plots</p>
+      <p class="detail3">- Save your plots in a database</p>
+      <p class="detail4">- Get advice for managing your plot</p>
+      <p class="detail5">- Feedback? Let us know!</p>
+    </div>
+    <img class="updateImg" src="images/updatePic1.jpg">
+    <div class="news">
+      <p class="newsTitle">Recent Soil News</p>
+      <p class="newsMessg">Stay up to date with news about the soil.</p>
+      <a href="https://www.cbc.ca/news/canada/british-columbia/bc-flooding-sumas-prairie-soil-testing-1.6261829" target="_blank">
+        <p class="news1">Fraser Valley farmers won't know for weeks how floodwaters have affected prized soil</p>
+      </a>
+      <a href="https://www.soils.org/news/science-news/human-waste-not-want-not/" target="_blank">
+        <p class="news2">(Human) waste not, want not</p>
+      </a>
+    </div>
+    <img class="newsPic" src="images/newsPic.jpg">
+    <div class="footer"></div>
+  </body>
+</html>
