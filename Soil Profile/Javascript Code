@@ -1,0 +1,12 @@
+import {PlotOfLand } from "./Objects/soilObject.js";
+
+listOfObjects
+
+function createObject(name, length, width, soilType, soilColour, nContent,  pContent, kContent, pHLevel){
+  temporaryObject
+};
+function changeFunc() {
+    var selectBox = document.getElementById("selectBox");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    alert(selectedValue);
+   };
