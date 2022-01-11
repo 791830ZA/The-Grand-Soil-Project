@@ -10,8 +10,7 @@
     <!Asks for a label for the field>
     <label type="name">Name of Field:</label>
     <input type="text" name="name" id="name"></input><br><br>
-    <input type="button" onclick="test()" value="test"</input><br>
-    
+
     <!Asks for Length of field>
     <label type="length"> Length (in meters):</label>
     <input type="text" name="length" id="length"></input><br><br>
@@ -28,7 +27,7 @@
     <br>
     <input type="radio" name="soilType" value="sand">Sand Soil</input>
     <br><br>
-    <input type="button" onclick="alertRadioSelection()" value="test"</input><br><br>
+    <input type="button" onclick="test()" value="test"</input><br><br>
 
     <!Asks for Soil Colour>
     <label for="soilColour"> Soil Colour:</label><br>
@@ -37,24 +36,36 @@
     <input type="radio" name="soilColour" value="Very Dark">Very Dark </input><br><br>
 
     <!Asks for soil testing, placeholder for an actual code>
-    <label for="soilTest"> SoilColour:</label><br>
+    <label for="soilTest"> Have you tested the soil for nutrients?</label><br>
     <input type="radio" name="soilTest" value="true">Yes</input><br>
     <input type="radio" name="soilTest" value="false">No</input>
     <br><br>
 
+    <!Asks for soil testing, possible actual code>
+    <label for="soilTest">Have you tested the soil for nutrients?</label><br><br>
+
     <!Asks for Nitrogen Content>
-    <label for="nContent">Nitrogen Content:</label>
-    <input type="text" id="nContent" name="nContent"></input><br><br>
+    <label for="nContent">Nitrogen Content (ppm):</label>
+    <input type="text" name="nContent" id="nContent"></input><br><br>
 
     <!Asks for Phosphorus Content>
-    <label for="pContent">Phosphorus Content:</label>
-    <input type="text" id="pContent" name="pContent"></input><br><br>
+    <label for="pContent">Phosphorus Content (ppm):</label>
+    <input type="text" name="pContent" id="pContent"></input><br><br>
 
     <!Asks for Potassium Content>
-    <label for="kContent">Potassium Content:</label>
-    <input type="text" id="pContent" name="pContent"></input><br><br>
-    
+    <label for="kContent">Potassium Content (ppm):</label>
+    <input type="text" name="pContent" id="pContent"></input><br><br>
+
+    <!Asks for PH Level>
+    <label for="pHLevel">pH Level: </label>
+    <input type="text" name="pHLevel" id="pHLevel"></input><br><br>
+
+    <!Submit Button>
+    <button type="button" onclick="saveDataToFile()">Click To Save</button><br><br>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <script src="Objects/soilObject.js" type="module"></script>
-    <script src="script.js"></script>
+    <script src="script.js" language="Javascript"></script>
   </body>
 </html>
