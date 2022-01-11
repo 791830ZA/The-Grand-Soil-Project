@@ -159,6 +159,54 @@
         width: 40px;
         height: 40px;
       }
+
+      /*Formatting bird's-eye view of field*/
+      .fieldView {
+        position: absolute;
+        top: 180px;
+        left: 700px;
+        height: 250px;
+        width: 400px;
+        background-color: black;
+      }
+
+      /*Formatting for dimension lines*/
+      .dimension1 {
+        position: absolute;
+        top: 415px;
+        left: 684px;
+        width: 450px;
+        height: 80px;
+      }
+      .dimension2 {
+        position: absolute;
+        transform: rotate(90deg);
+        top: 272px;
+        left: 980px;
+        width: 300px;
+        height: auto;
+      }
+
+      /*Formatting for length text*/
+      .lengthText {
+        position: absolute;
+        top: 460px;
+        left: 870px;
+        font-size: 15px;
+        font-family: Verdana;
+        color: black;
+      }
+
+      /*Formatting for width text*/
+      .widthText {
+        position: absolute;
+        transform: rotate(90deg);
+        top: 280px;
+        left: 1130px;
+        font-size: 15px;
+        font-family: Verdana;
+        color: black;
+      }
     </style>
   </head>
   <body>
@@ -197,6 +245,14 @@
         <a href="newPlot.html">
           <img class="edit" src="images/edit.png">
         </a>
+        <!Insert bird's-eye view of field>
+        <img class="fieldView" src="images/farmView.jpg">
+        <!Insert dimension lines>
+        <img class="dimension1" src="images/dimension.png">
+        <img class="dimension2" src="images/dimension.png">
+        <!Insert dimension values>
+        <p class="lengthText">length</p>
+        <p class="widthText">width</p>
       </div>
     </div>
   </body>
