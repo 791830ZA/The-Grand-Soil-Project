@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Log in to Your Account</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="images/logo2.png">
+    
+    <style>
+      .logo {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        height: 80px;
+        width: auto;
+        z-index: 100;
+      }
+      .login {
+        position: fixed;
+        top: 15px;
+        right: 300px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+      .login:hover {
+        text-decoration: underline;
+      }
+      .signup {
+        position: fixed;
+        top: 15px;
+        right: 185px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+      .signup:hover {
+        text-decoration: underline;
+      }
+      .community {
+        position: fixed;
+        top: 15px;
+        right: 50px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+      .community:hover {
+        text-decoration: underline;
+      }
+      .about {
+        position: fixed;
+        top: 15px;
+        right: 400px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+      .about:hover {
+        text-decoration: underline;
+      }
+      .topRectangle {
+        position: fixed;
+        top: 0;
+        left: 0px;
+        width: 100%;
+        height: 100px;
+        background-color: #355E3B;
+        z-index: 20;
+      }
+      .getAcc {
+        position: absolute;
+        top: 540px;
+        right: 120px;
+        font-family: Verdana;
+        font-size: 20px;
+        color: green;
+      }
+      .getAcc:hover {
+        text-decoration: underline;
+      }
+      .title1 {
+        position: relative;
+        top: 100px;
+        font-family: Verdana;
+        font-size: 50px;
+        font-weight: bold;
+      }
+      label[for=uname] {
+        position: relative;
+        top: 90px;
+        font-family: Verdana;
+        font-size: 30px;
+      }
+      label[for=password] {
+        position: relative;
+        top: 110px;
+        font-family: Verdana;
+        font-size: 30px;
+      }
+      input[type=uname] {
+        position: relative;
+        top: 95px;
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+      input[type=password] {
+        position: relative;
+        top: 115px;
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+      .loginPicture {
+        position: absolute;
+        top: 150px;
+        right: 20px;
+        width: 45%;
+        height: auto;
+      }
+      .loginButton {
+        position: absolute;
+        top: 500px;
+        left: 150px;
+        width: 300px;
+        height: 100px;
+        border-radius: 20px;
+        background-color: purple;
+      }
+      .buttonText {
+        position: absolute;
+        top: 0px;
+        left: 105px;
+        font-size: 30px;
+        color: white;
+        font-family: Verdana;
+      }
+      .footer {
+        position: absolute;
+        top: 640px;
+        width: 50%;
+        height: 20px;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topRectangle">
+      <a href="aboutUs.html">
+        <p class="about">About us</p>
+      </a>
+      <a href="login.html">
+        <p class="login">Log in</p>
+      </a>
+      <a href="signup.html">
+        <p class="signup">Sign up</p>
+      </a>
+      <a href="community.html">
+        <p class="community">Community</p>
+      </a>
+      <a href="index.html">
+        <img class="logo" src="images/logo.png">
+      </a>
+    </div>
+    <p class="title1">Log in to your account</p>
+      <form action="login.php" method="post">
+        <label for="uname">Username:</label><br>
+        <input type="uname" id = "uname" name="uname"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password">
+      </form>
+      <a href="signup.html" style="text-decoration:none">
+        <p class="getAcc">Don't have an account? Sign up here</p>
+      </a>
+    <img class="loginPicture" src="images/loginPic.jpg">
+    <div class="loginButton">
+      <a href="mainMenu.html">
+        <p class="buttonText">Log in</p>
+      </a>
+    </div>
+    <div class="footer"></div>
+  </body>
+</html>
