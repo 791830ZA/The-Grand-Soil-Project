@@ -232,19 +232,10 @@
       /*Formatting for question 3*/
       .Q3 {
         position: absolute;
-        top: 830px;
+        top: 860px;
         left: 20px;
         font-size: 30px;
         font-family: Verdana;
-      }
-
-      /*Formatting for selection box*/
-      select[id=selectBox] {
-        position: absolute;
-        top: 910px;
-        left: 20px;
-        font-family: Verdana;
-        fony-size: 20px;
       }
 
       /*Formatting for tested option bubble*/
@@ -484,10 +475,6 @@
 
       <!Insert question 3>
       <p class="Q3">Have you tested your soil for nutrients?</p><br>
-      <select id="selectBox" onchange="changeFunc();">
-        <option value="1">Option #1</option>
-        <option value="2">Option #2</option>
-      </select><br>
       <input type="radio" id="tested" name="test" value="true">
       <label for="tested">Yes</label><br>
       <input type="radio" id="notTested" name="test" value="false">
@@ -501,7 +488,7 @@
       <input type="text" name="width" id="width"></input><br><br>
 
       <!Insert question 5>
-      <p class="Q5">Please specify the amount of each nutrient present in your farm.</p>
+      <p class="Q5">Please specify the amount of each nutrient present in your farm in ppm.</p>
       <label for="nContent">Nitrogen Content:</label>
       <input type="text" id="nContent" name="nContent"></input><br><br>
       <label for="pContent">Phosphorus Content:</label>
