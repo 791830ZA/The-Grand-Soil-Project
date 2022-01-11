@@ -7,6 +7,8 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="icon" href="images/logo2.png">
     <style>
+      
+      /*Formatting for logo at top left*/
       .logo {
         position: fixed;
         top: 10px;
@@ -15,6 +17,8 @@
         width: auto;
         z-index: 100;
       }
+
+      /*Formatting for "Create new plot" button at top*/
       .newPlot {
         position: fixed;
         top: 15px;
@@ -24,9 +28,13 @@
         color: white;
         z-index: 100;
       }
+
+      /*Creates underline when mouse is hovered above "Create new plot" button*/
       .newPlot:hover {
         text-decoration: underline;
       }
+
+      /*Formatting for "My plots" button at top*/
       .plot {
         position: fixed;
         top: 15px;
@@ -36,9 +44,13 @@
         color: white;
         z-index: 100;
       }
+
+      /*Creates underline when mouse is hovered above "My plots" button*/
       .plot:hover {
         text-decoration: underline;
       }
+
+      /*Formatting for "My account" button at top*/
       .account {
         position: fixed;
         top: 15px;
@@ -48,9 +60,13 @@
         color: white;
         z-index: 100;
       }
+
+      /*Creates underline when mouse is hovered above "My account" button*/
       .account:hover {
         text-decoration: underline;
       }
+
+      /*Formatting for "Log out" button at top*/
       .logout {
         position: fixed;
         top: 15px;
@@ -60,9 +76,13 @@
         color: white;
         z-index: 100;
       }
+
+      /*Creates underline when mouse is hovered above "Log out" button*/
       .logout:hover {
         text-decoration: underline;
       }
+
+      /*Formatting for menu at top*/
       .topRectangle {
         position: fixed;
         top: 0;
@@ -72,6 +92,8 @@
         background-color: #6B8E23;
         z-index: 20;
       }
+
+      /*Formatting for profile piture*/
       .pfp {
         position: absolute;
         top: 130px;
@@ -81,6 +103,8 @@
         border: 5px solid green;
         border-radius: 500px;
       }
+
+      /*Formatting for title text*/
       .name {
         position: absolute;
         top: 155px;
@@ -89,6 +113,8 @@
         left: 350px;
         font-family: Verdana;
       }
+
+      /*Formatting for text underneath title*/
       .message {
         position: absolute;
         top: 255px;
@@ -96,6 +122,8 @@
         left: 350px;
         font-family: Verdana; 
       }
+
+      /*Formatting for email text*/
       label[for=email] {
         position: absolute;
         top: 420px;
@@ -103,6 +131,8 @@
         font-family: Verdana;
         font-size: 30px;
       }
+
+      /*Formatting for first name text*/
       label[for=firstName] {
         position: absolute;
         top: 540px;
@@ -110,6 +140,8 @@
         font-family: Verdana;
         font-size: 30px;
       }
+
+      /*Formatting for last name text*/
       label[for=lastName] {
         position: absolute;
         top: 660px;
@@ -117,6 +149,8 @@
         font-family: Verdana;
         font-size: 30px;
       }
+
+      /*Formatting for birthday text*/
       label[for=birthday] {
         position: absolute;
         top: 780px;
@@ -124,6 +158,8 @@
         font-family: Verdana;
         font-size: 30px;
       }
+
+      /*Formatting for username text*/
       label[for=uname] {
         position: absolute;
         top: 900px;
@@ -131,6 +167,8 @@
         font-family: Verdana;
         font-size: 30px;
       }
+
+      /*Formatting for password text*/
       label[for=password] {
         position: absolute;
         top: 1020px;
@@ -138,6 +176,8 @@
         font-family: Verdana;
         font-size: 30px;
       }
+
+      /*Formatting for email textbox*/
       input[type=email] {
         position: absolute;
         top: 460px;
@@ -147,6 +187,8 @@
         margin: 8px 0;
         box-sizing: border-box;
       }
+
+      /*Formattting for first name textbox*/
       input[name=firstName] {
         position: absolute;
         top: 580px;
@@ -156,6 +198,8 @@
         margin: 8px 0;
         box-sizing: border-box;
       }
+
+      /*Formatting for last name textbox*/
       input[name=lastName] {
         position: absolute;
         top: 700px;
@@ -165,6 +209,8 @@
         margin: 8px 0;
         box-sizing: border-box;
       }
+
+      /*Formatting for birthday textbox*/
       input[type=date] {
         position: absolute;
         top: 820px;
@@ -174,6 +220,8 @@
         margin: 8px 0;
         box-sizing: border-box;
       }
+
+      /*Formatting for username textbox*/
       input[type=uname] {
         position: absolute;
         top: 940px;
@@ -183,6 +231,8 @@
         margin: 8px 0;
         box-sizing: border-box;
       }
+
+      /*Formatting for password textbox*/
       input[type=password] {
         position: absolute;
         top: 1060px;
@@ -192,6 +242,8 @@
         margin: 8px 0;
         box-sizing: border-box;
       }
+
+      /*Formatting for save button*/
       .saveButton {
         position: absolute;
         top: 1150px;
@@ -201,6 +253,8 @@
         border-radius: 20px;
         background-color: purple;
       }
+
+      /*Formatting for text in save button*/
       .saveText {
         position: absolute;
         top: -7px;
@@ -209,6 +263,8 @@
         color: white;
         font-family: Verdana;
       }
+
+      /*Formatting for footer*/
       .footer {
         position: absolute;
         top: 1250px;
@@ -219,6 +275,7 @@
     </style>
   </head>
   <body>
+    <!Insert menu>
     <div class="topRectangle">
       <a href="newPlot.html">
         <p class="newPlot">Create new plot</p>
@@ -235,28 +292,42 @@
         <img class="logo" src="images/logo.png">
       </a>
     </div>
+
+    <!Insert profile picture, title, and message>
     <img class="pfp" src="images/pfp.png">
     <p class="name">Hello, User!</p>
     <p class="message">Edit your profile information here.</p>
+
+    <!Insert profile information>
     <form>
+      <!Insert email info>
       <label for="email">Email:</label><br>
       <input type="email" id = "email" name="email"><br>
+      <!Insert first name info>
       <label for="firstName">First Name:</label><br>
       <input type="text" id = "firstName" name="firstName"><br>
+      <!Insert last name info>
       <label for="lastName">Last Name:</label><br>
       <input type="text" id = "lastName" name="lastName"><br>
+      <!Insert birthday info>
       <label for="birthday">Date of Birth:</label><br>
       <input type="date" id="birthday" name="birthday"><br>
+      <!Insert username info>
       <label for="uname">Username:</label><br>
       <input type="uname" id="uname" name="uname"><br>
+      <!Insert password info>
       <label for="password">Password:</label><br>
       <input type="password" id="password" name="password">
     </form>
+
+    <!Insert save button>
     <div class="saveButton">
       <a href="myAccount.html">
         <p class="saveText">Save</p>
       </a>
     </div>
+
+    <!Insert footer>
     <div class="footer"></div>
   </body>
 </html>
