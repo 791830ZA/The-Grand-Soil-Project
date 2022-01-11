@@ -1,12 +1,46 @@
-import {PlotOfLand } from "./Objects/soilObject.js";
+/**
+ * @function - creates an object using the class above by taking in inputs and pushes it to a list
+ */
+function createObject(){
+  
+  var name = document.getElementById("name").value;
+  var length = document.getElementById("length").value;
+  var width = document.getElementById("width").value;
 
-listOfObjects
+  var soilTypeRadios = document.getElementsByName("soilType");
+  for (var i = 0; i<soilTypeRadios.length; i++){
+    if(soilTypeRadios[i].checked){
+      soilType=soilTypeRadios[i].value;
+      break;
+    };
+  };
 
-function createObject(name, length, width, soilType, soilColour, nContent,  pContent, kContent, pHLevel){
-  temporaryObject
+  var soilColourRadios = document.getElementsByName("soilColour");
+  for(var i=0; i<soilColourRadios.length;i++){
+    if (soilColourRadios[i].checked){
+      soilColour=soilColourRadios[i].value;
+      break;
+    };
+  };
+
+  var soilTestRadios = document.getElementsByName("soilTest");
+  for(var i=0; i<soilTestRadios.length;i++){
+    if (soilTestRadios[i].value == "true"){
+      var nContent = document.getElementById("nContent").value;
+      var pContent = document.getElementById("pContent").value;
+      var kContent = document.getElementById("kContent").value;
+      var pHLevel = document.getElementById("pHLevel").value;
+    }else{
+      var nContent = 40;
+      var pContent = 40;
+      var kContent = 40;
+      var pHLevel = 7
+    }
+  }
+
+  
+  temporaryObject = new PlotOfLand(name, length, width, soilType, soilColour, nContent, pContent, kContent, pHLevel);
+
+  return temporaryObject
+
 };
-function changeFunc() {
-    var selectBox = document.getElementById("selectBox");
-    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-    alert(selectedValue);
-   };
