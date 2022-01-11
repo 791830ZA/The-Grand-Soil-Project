@@ -7,6 +7,8 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="icon" href="images/logo2.png">
     <style>
+      
+      /*Formatting for logo at top left*/
       .logo {
         position: fixed;
         top: 10px;
@@ -15,6 +17,8 @@
         width: auto;
         z-index: 100;
       }
+
+      /*Formatting for "Create new plot" button at top*/
       .newPlot {
         position: fixed;
         top: 15px;
@@ -24,9 +28,13 @@
         color: white;
         z-index: 100;
       }
+
+      /*Creates underline when mouse is hovered above "Create new plot" button*/
       .newPlot:hover {
         text-decoration: underline;
       }
+
+      /*Formatting for "My plots" button at top*/
       .plot {
         position: fixed;
         top: 15px;
@@ -36,9 +44,13 @@
         color: white;
         z-index: 100;
       }
+
+      /*Creates underline when mouse is hovered above "My plots" button*/
       .plot:hover {
         text-decoration: underline;
       }
+
+      /*Formatting for "My account" button at top*/
       .account {
         position: fixed;
         top: 15px;
@@ -48,9 +60,13 @@
         color: white;
         z-index: 100;
       }
+
+      /*Creates underline when mouse is hovered above "My account" button*/
       .account:hover {
         text-decoration: underline;
       }
+
+      /*Formatting for "Log out" button at top*/
       .logout {
         position: fixed;
         top: 15px;
@@ -60,9 +76,13 @@
         color: white;
         z-index: 100;
       }
+
+      /*Creates underline when mouse is hovered above "Log out" button*/
       .logout:hover {
         text-decoration: underline;
       }
+
+      /*Formatting for menu at top*/
       .topRectangle {
         position: fixed;
         top: 0;
@@ -72,6 +92,8 @@
         background-color: #6B8E23;
         z-index: 20;
       }
+
+      /*Formatting for title text*/
       .title {
         position: absolute;
         top: 70px;
@@ -80,6 +102,8 @@
         font-weight: bold;
         left: 120px;
       }
+
+      /*Formatting for "Create new plot" button (big green)*/
       .button1 {
         position: absolute;
         top: 320px;
@@ -89,6 +113,8 @@
         border-radius: 20px;
         background-color: green;
       }
+
+      /*Formatting for text in big green button*/
       .text1 {
         position: absolute;
         top: 10px;
@@ -97,6 +123,8 @@
         font-family: Verdana;
         color: white;
       }
+
+      /*Formatting for "Open saved plots" button (big yellow)*/
       .button2 {
         position: absolute;
         top: 320px;
@@ -106,6 +134,8 @@
         border-radius: 20px;
         background-color: orange;
       }
+
+      /*Formatting for text in big yellow button*/
       .text2 {
         position: absolute;
         top: 10px;
@@ -114,6 +144,8 @@
         font-family: Verdana;
         color: white;
       }
+
+      /*Formatting for recent update rectangle*/
       .update {
         position: absolute;
         top: 600px;
@@ -122,6 +154,8 @@
         height: 430px;
         background-color: #ADD8E6;
       }
+
+      /*Formatting for title text in update rectangle*/
       .updateVer {
         position: absolute;
         top: 10px;
@@ -130,6 +164,8 @@
         font-family: Verdana;
         font-weight: bold;
       }
+
+      /*Formatting for points in update rectangle*/
       .detail1 {
         position: absolute;
         top: 100px;
@@ -165,6 +201,8 @@
         font-size: 20px;
         font-family: Verdana;
       }
+
+      /*Formatting for image in update rectangle*/
       .updateImg {
         position: absolute;
         top: 600px;
@@ -173,6 +211,8 @@
         object-fit: cover;
         right: 0px; 
       }
+
+      /*Formatting for news rectangle*/
       .news {
         position: absolute;
         top: 1130px;
@@ -181,6 +221,8 @@
         height: 300px;
         background-color: #9ACD32;
       }
+
+      /*Formatting for news rectangle title text*/
       .newsTitle {
         position: absolute;
         top: 10px;
@@ -190,6 +232,8 @@
         font-family: Verdana;
         font-weight: bold;
       }
+
+      /*Formatting for text underneath title in news rectangle*/
       .newsMessg {
         position: absolute;
         top: 80px;
@@ -198,6 +242,8 @@
         font-size: 20px;
         font-family: Verdana;
       }
+
+      /*Formatting for first news link*/
       .news1 {
         position: absolute;
         top: 130px;
@@ -207,6 +253,8 @@
         font-family: Verdana;
         color: white;
       }
+
+      /*Formatting for second news link*/
       .news2 {
         position: absolute;
         top: 200px;
@@ -216,6 +264,8 @@
         font-family: Verdana;
         color: white;
       }
+
+      /*Formatting for image in news recntangle*/
       .newsPic {
         position: absolute;
         top: 1130px;
@@ -224,6 +274,8 @@
         object-fit: cover;
         left: 0px; 
       }
+
+      /*Formatting for footer*/
       .footer {
         position: absolute;
         top: 1450px;
@@ -234,7 +286,7 @@
     </style>
   </head>
   <body>
-    <p class="title">Welcome to Your Farm</p>
+    <!Insert menu>
     <div class="topRectangle">
       <a href="newPlot.html">
         <p class="newPlot">Create new plot</p>
@@ -251,16 +303,25 @@
         <img class="logo" src="images/logo.png">
       </a>
     </div>
+
+    <!Insert title text>
+    <p class="title">Welcome to Your Farm</p>
+
+    <!Insert green button>
     <div class="button1">
       <a href="newPlot.html">
         <p class="text1">Create new plot</p>
       </a>
     </div>
+
+    <!Insert yellow button>
     <div class="button2">
       <a href="myPlots.html">
-        <p class="text2">Open saved plot</p>
+        <p class="text2">Open saved plots</p>
       </a>
     </div>
+
+    <!Insert update box>
     <div class="update">
       <p class="updateVer">Version 1.0: What's new?</p>
       <p class="detail1">- Congratulations, you are using the first ever version of Soil Assistant!</p>
@@ -270,17 +331,21 @@
       <p class="detail5">- Feedback? Let us know!</p>
     </div>
     <img class="updateImg" src="images/updatePic1.jpg">
+
+    <!Insert news box>
     <div class="news">
       <p class="newsTitle">Recent Soil News</p>
       <p class="newsMessg">Stay up to date with news about the soil.</p>
       <a href="https://www.cbc.ca/news/canada/british-columbia/bc-flooding-sumas-prairie-soil-testing-1.6261829" target="_blank">
         <p class="news1">Fraser Valley farmers won't know for weeks how floodwaters have affected prized soil</p>
       </a>
-      <a href="https://www.soils.org/news/science-news/human-waste-not-want-not/" target="_blank">
-        <p class="news2">(Human) waste not, want not</p>
+      <a href="https://www.soils.org/news/science-news/are-prairie-mixes-only-option-crop-field-borders" target="_blank">
+        <p class="news2">Are prairie mixes the only option for crop field borders?</p>
       </a>
     </div>
     <img class="newsPic" src="images/newsPic.jpg">
+
+    <!Insert footer>
     <div class="footer"></div>
   </body>
 </html>
