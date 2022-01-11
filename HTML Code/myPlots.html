@@ -7,6 +7,8 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="icon" href="images/logo2.png">
     <style>
+      
+      /*Formatting for logo at top left*/
       .logo {
         position: fixed;
         top: 10px;
@@ -15,6 +17,8 @@
         width: auto;
         z-index: 100;
       }
+
+      /*Formatting for "Create new plot" button at top*/
       .newPlot {
         position: fixed;
         top: 15px;
@@ -24,9 +28,13 @@
         color: white;
         z-index: 100;
       }
+
+      /*Creates underline when mouse is hovered above "Create new plot" button*/
       .newPlot:hover {
         text-decoration: underline;
       }
+
+      /*Formatting for "My plots" button at top*/
       .plot {
         position: fixed;
         top: 15px;
@@ -36,9 +44,13 @@
         color: white;
         z-index: 100;
       }
+
+      /*Creates underline when mouse is hovered above "My plots" button*/
       .plot:hover {
         text-decoration: underline;
       }
+
+      /*Formatting for "My account" button at top*/
       .account {
         position: fixed;
         top: 15px;
@@ -48,9 +60,13 @@
         color: white;
         z-index: 100;
       }
+
+      /*Creates underline when mouse is hovered above "My account" button*/
       .account:hover {
         text-decoration: underline;
       }
+
+      /*Formatting for "Log out" button at top*/
       .logout {
         position: fixed;
         top: 15px;
@@ -60,9 +76,13 @@
         color: white;
         z-index: 100;
       }
+
+      /*Creates underline when mouse is hovered above "Log out" button*/
       .logout:hover {
         text-decoration: underline;
       }
+
+      /*Formatting for menu at top*/
       .topRectangle {
         position: fixed;
         top: 0;
@@ -72,6 +92,8 @@
         background-color: #6B8E23;
         z-index: 20;
       }
+
+      /*Formatting for plot info box white border*/
       .border {
         position: absolute;
         width: 100%;
@@ -80,6 +102,8 @@
         left: 0px;
         background-color: white;
       }
+
+      /*Formatting for plot info box*/
       .myPlot {
         position: absolute;
         width: 100%;
@@ -88,6 +112,8 @@
         left: 0px;
         background-color: #bdc97b;
       }
+
+      /*Formatting for info inside plot info box*/
       .fieldName {
         position: absolute;
         top: 40px;
@@ -117,13 +143,15 @@
         font-size: 24px;
         font-family: Verdana;
       }
-      .reccomend {
+      .recommend {
         position: absolute;
         top: 370px;
         left: 20px;
         font-size: 24px;
         font-family: Verdana;
       }
+
+      /*Formatting for edit button*/
       .edit {
         position: absolute;
         top: 40px;
@@ -134,6 +162,7 @@
     </style>
   </head>
   <body>
+    <!Insert menu>
     <div class="topRectangle">
       <a href="newPlot.html">
         <p class="newPlot">Create new plot</p>
@@ -150,13 +179,21 @@
         <img class="logo" src="images/logo.png">
       </a>
     </div>
+
+    <!Insert plot info box>
     <div class="border">
       <div class="myPlot">
+        <!Insert field name>
         <p class="fieldName">(Field name)</p>
-        <p class="soilHealth">Soil Health:</p>
-        <p class="cropGrowing">Crops currently planted:</p>
-        <p class="outcome">Expected Outcome:</p>
-        <p class="reccomend">Reccomendations/Tips:</p>
+        <!Insert soil health>
+        <p class="soilHealth">Soil Health: </p>
+        <!Insert types of crops>
+        <p class="cropGrowing">Crops currently planted: </p>
+        <!Insert expected crop yield>
+        <p class="outcome">Expected Outcome: </p>
+        <!Insert recomeendations and tips>
+        <p class="recommend">Recommendations/Tips: </p>
+        <!Insert edit button>
         <a href="newPlot.html">
           <img class="edit" src="images/edit.png">
         </a>
