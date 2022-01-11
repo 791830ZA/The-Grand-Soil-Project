@@ -7,6 +7,8 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="icon" href="images/logo2.png">
     <style>
+
+      /*Formatting for logo at top left*/
       .logo {
         position: fixed;
         top: 10px;
@@ -15,6 +17,8 @@
         width: auto;
         z-index: 100;
       }
+
+      /*Formatting for "Log in" button at top*/
       .login {
         position: fixed;
         top: 15px;
@@ -24,9 +28,13 @@
         color: white;
         z-index: 100;
       }
+
+      /*Creates underline when mouse is hovered above "Log in" button*/
       .login:hover {
         text-decoration: underline;
       }
+
+      /*Formatting for "Sign up" button at top*/
       .signup {
         position: fixed;
         top: 15px;
@@ -36,9 +44,13 @@
         color: white;
         z-index: 100;
       }
+
+      /*Creates underline when mouse is hovered above "Sign up" button*/
       .signup:hover {
         text-decoration: underline;
       }
+
+      /*Formatting for "Community" button at top*/
       .community {
         position: fixed;
         top: 15px;
@@ -48,9 +60,13 @@
         color: white;
         z-index: 100;
       }
+
+      /*Creates underline when mouse is hovered above "Community" button*/
       .community:hover {
         text-decoration: underline;
       }
+
+      /*Formatting for "About us" button at top*/
       .about {
         position: fixed;
         top: 15px;
@@ -60,9 +76,13 @@
         color: white;
         z-index: 100;
       }
+
+      /*Creates underline when mouse is hovered above "About" button*/
       .about:hover {
         text-decoration: underline;
       }
+
+      /*Formatting for menu at top*/
       .topRectangle {
         position: fixed;
         top: 0;
@@ -72,6 +92,8 @@
         background-color: #355E3B;
         z-index: 20;
       }
+      
+      /*Formatting for page title*/
       .title2 {
         position: relative;
         top: 100px;
@@ -80,6 +102,8 @@
         font-family: Verdana;
         font-weight: bold;
       }
+
+      /*Formatting for message on page*/
       .message {
         position: relative;
         top: 80px;
@@ -89,6 +113,8 @@
         width: 50%;
         line-height: 1.8;
       }
+
+      /*Formatting for image on right*/
       .abtUs1 {
         position: absolute;
         top: 180px;
@@ -97,6 +123,8 @@
         width: 45%;
         object-fit: cover;
       }
+
+      /*Formatting for rectangle with team*/
       .rectangle1 {
         position: absolute;
         background-color: #93C572;
@@ -105,6 +133,8 @@
         top: 800px;
         left: 0px;
       }
+
+      /*Formatting for title text in team section*/
       .team {
         position: absolute;
         z-index: 10;
@@ -114,6 +144,8 @@
         font-family: Verdana;
         font-weight: bold;
       }
+
+      /*Formatting for profile pictures*/
       .pfp1 {
         position: absolute;
         z-index: 10;
@@ -144,6 +176,8 @@
         border: 5px solid green;
         border-radius: 500px;
       }
+
+      /*Formatting for team member names*/
       .teamMem1 {
         position: absolute;
         z-index: 10;
@@ -168,6 +202,8 @@
         font-size: 50px;
         font-family: Verdana;
       }
+
+      /*Formatting for text underneath members*/
       .teamInfo {
         position: absolute;
         z-index: 10;
@@ -181,6 +217,7 @@
     </style>
   </head>
   <body>
+    <!Insert menu>
     <div class="topRectangle">
       <a href="aboutUs.html">
         <p class="about">About us</p>
@@ -198,13 +235,17 @@
         <img class="logo" src="images/logo.png">
       </a>
     </div>
-    <div class="rectangle1"></div>
+
+    <!Insert title text, message text, and image>
     <img class="abtUs1" src="images/abtUs1.jpg">
+    <p class="title2">About Us</p>
+    <p class="message">Our mission is to protect the soil in farmlands. A major problem in today's society is the loss of healthy soil, and these often result from problems that farmers can fix, but don't have the facilities to do so. However, farmers do not need to worry about this anymore thanks to the arrival of Soil Assistant, which can track your soil quality, direct your crop rotation, and provide advice on how to keep your soil in top shape. All that is needed to create a healthier and more sustainable future for your farm and the farming industry is a few seconds of your time to create an account for an incredible software that will ensure you are planting sustainably, completely free of charge.</p>
+
+    <!Insert team members section>
+    <div class="rectangle1"></div>
     <img class="pfp1" src="images/pfp.png">
     <img class="pfp2" src="images/pfp.png">
     <img class="pfp3" src="images/pfp.png">
-    <p class="title2">About Us</p>
-    <p class="message">Our mission is to protect the soil in farmlands. A major problem in today's society is the loss of healthy soil, and these often result from problems that farmers can fix, but don't have the facilities to do so. However, farmers do not need to worry about this anymore thanks to the arrival of Soil Assistant, which can track your soil quality, direct your crop rotation, and provide advice on how to keep your soil in top shape. All that is needed to create a healthier and more sustainable future for your farm and the farming industry is a few seconds of your time to create an account for an incredible software that will ensure you are planting sustainably, completely free of charge.</p>
     <p class="team">Meet the team.</p>
     <p class="teamMem1">Abdullah</p>
     <p class="teamMem2">Samuel</p>
