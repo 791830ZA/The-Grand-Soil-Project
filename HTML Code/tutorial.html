@@ -7,6 +7,8 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="icon" href="images/logo2.png">
     <style>
+
+      /*Formatting for logo at top left*/
       .logo {
         position: fixed;
         top: 10px;
@@ -15,6 +17,8 @@
         width: auto;
         z-index: 100;
       }
+
+      /*Formatting for "Log in" button at top*/
       .login {
         position: fixed;
         top: 15px;
@@ -24,9 +28,13 @@
         color: white;
         z-index: 100;
       }
+
+      /*Creates underline when mouse is hovered above "Log in" button*/
       .login:hover {
         text-decoration: underline;
       }
+
+      /*Formatting for "Sign up" button at top*/
       .signup {
         position: fixed;
         top: 15px;
@@ -36,9 +44,13 @@
         color: white;
         z-index: 100;
       }
+
+      /*Creates underline when mouse is hovered above "Sign up" button*/
       .signup:hover {
         text-decoration: underline;
       }
+
+      /*Formatting for "Community" button at top*/
       .community {
         position: fixed;
         top: 15px;
@@ -48,9 +60,13 @@
         color: white;
         z-index: 100;
       }
+
+      /*Creates underline when mouse is hovered above "Community" button*/
       .community:hover {
         text-decoration: underline;
       }
+
+      /*Formatting for "About us" button at top*/
       .about {
         position: fixed;
         top: 15px;
@@ -60,9 +76,13 @@
         color: white;
         z-index: 100;
       }
+
+      /*Creates underline when mouse is hovered above "About" button*/
       .about:hover {
         text-decoration: underline;
       }
+
+      /*Formatting for menu at top*/
       .topRectangle {
         position: fixed;
         top: 0;
@@ -72,6 +92,8 @@
         background-color: #355E3B;
         z-index: 20;
       }
+      
+      /*Formatting for title text*/
       .title {
         position: absolute;
         top: 100px;
@@ -81,6 +103,8 @@
         font-weight: bold;
         color: black;
       }
+
+      /*Formatting for text underneath title*/
       .message {
         position: absolute;
         top: 320px;
@@ -89,6 +113,8 @@
         font-family: Verdana;
         color: black;
       }
+
+      /*Formatting for step 1 picture*/
       .pic1 {
         position: absolute;
         top: 520px;
@@ -98,6 +124,8 @@
         border-style: solid;
         border-color: black;
       }
+
+      /*Formatting for step 1 text*/
       .instr1 {
         position: absolute;
         top: 580px;
@@ -106,6 +134,8 @@
         font-size: 20px;
         font-family: Verdana;
       }
+
+      /*Formatting for step 2 picture*/
       .pic2 {
         position: absolute;
         top: 860px;
@@ -115,6 +145,8 @@
         border-style: solid;
         border-color: black;
       }
+
+      /*Formatting for step 2 text*/
       .instr2 {
         position: absolute;
         top: 970px;
@@ -123,6 +155,8 @@
         font-size: 20px;
         font-family: Verdana;
       }
+
+      /*Formatting for step 3 picture*/
       .pic3 {
         position: absolute;
         top: 1300px;
@@ -132,6 +166,8 @@
         border-style: solid;
         border-color: black;
       }
+
+      /*Formatting for step 3 text*/
       .instr3 {
         position: absolute;
         top: 1400px;
@@ -140,6 +176,8 @@
         font-size: 20px;
         font-family: Verdana;
       }
+
+      /*Formatting for step 4 picture*/
       .pic4 {
         position: absolute;
         top: 1700px;
@@ -149,6 +187,8 @@
         border-style: solid;
         border-color: black;
       }
+
+      /*Formatting for step 4 text*/
       .instr4 {
         position: absolute;
         top: 1780px;
@@ -157,6 +197,8 @@
         font-size: 20px;
         font-family: Verdana;
       }
+
+      /*Formatting for step 5 picture*/
       .pic5 {
         position: absolute;
         top: 2100px;
@@ -166,6 +208,8 @@
         border-style: solid;
         border-color: black;
       }
+
+      /*Formatting for step 5 text*/
       .instr5 {
         position: absolute;
         top: 2200px;
@@ -174,6 +218,8 @@
         font-size: 20px;
         font-family: Verdana;
       }
+
+      /*Formatting for step 6 picture*/
       .pic6 {
         position: absolute;
         top: 2500px;
@@ -183,6 +229,8 @@
         border-style: solid;
         border-color: black;
       }
+
+      /*Formatting for step 6 text*/
       .instr6 {
         position: absolute;
         top: 2600px;
@@ -191,6 +239,8 @@
         font-size: 20px;
         font-family: Verdana;
       }
+
+      /*Formatting for footer*/
       .footer {
         position: absolute;
         top: 2800px;
@@ -201,7 +251,7 @@
     </style>
   </head>
   <body>
-    <div class="titleRectangle"></div>
+    <!Insert menu>
     <div class="topRectangle">
       <a href="aboutUs.html">
         <p class="about">About us</p>
@@ -219,20 +269,36 @@
         <img class="logo" src="images/logo.png">
       </a>
     </div>
+
+    <!Insert title and message>
     <p class="title">Welcome, and thank you for using Soil Assistant!</p>
     <p class="message">Soil Assistant is a great tool for helping you manage your farmland. If you don't know where to start, don't worry – we'll cover all you need to know about using this program in this tutorial.</p>
+
+    <!Insert step 1>
     <img class="pic1" src="images/tutorial1.JPG">
     <p class="instr1">First, you need an account. If you don't have an account, make sure to click "Sign up". If you already have one, click "Log in".</p>
+
+    <!Insert step 2>
     <img class="pic2" src="images/tutorial2.JPG">
     <p class="instr2">Fill in all the boxes on the sign up page. Remember your username and password, as they will be needed to log in. After filling all the boxes, press "Create Account".</p>
+
+    <!Insert step 3>
     <img class="pic3" src="images/tutorial3.JPG">
     <p class="instr3">You will be directed to your account's main menu. To set up your farm, click the "Create new plot" button.</p>
+
+    <!Insert step 4>
     <img class="pic4" src="images/tutorial4.JPG">
     <p class="instr4">Complete all questions in the survey. Please answer the questions properly. If you have tested for nutrients (recommended), be sure to include amounts of each nutrient in the shown question. If not, leave it blank, and we will decide for you. After you are done, click the "Submit" button.</p>
+
+    <!Insert step 5>
     <img class="pic5" src="images/tutorial5.JPG">
     <p class="instr5">Your farm setup is done! If you want to edit your information, click the edit button and make the changes and edits you need.</p>
+
+    <!Insert step 6>
     <img class="pic6" src="images/tutorial6.JPG">
     <p class="instr6">To edit your profile information, you can press "My account" and make changes.</p>
+
+    <!Insert footer>
     <div class="footer"></div>
   </body>
 </html>
