@@ -41,9 +41,6 @@
     <input type="radio" name="soilTest" value="false">No</input>
     <br><br>
 
-    <!Asks for soil testing, possible actual code>
-    <label for="soilTest">Have you tested the soil for nutrients?</label><br><br>
-
     <!Asks for Nitrogen Content>
     <label for="nContent">Nitrogen Content (ppm):</label>
     <input type="text" name="nContent" id="nContent"></input><br><br>
