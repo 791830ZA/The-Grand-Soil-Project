@@ -27,7 +27,7 @@
     <br>
     <input type="radio" name="soilType" value="sand">Sand Soil</input>
     <br><br>
-    <input type="button" onclick="test()" value="test"</input><br><br>
+    <input type="button" id="test" onclick="test()" value="test"</input><br><br>
 
     <!Asks for Soil Colour>
     <label for="soilColour"> Soil Colour:</label><br>
@@ -54,18 +54,16 @@
 
     <!Asks for Potassium Content>
     <label for="kContent">Potassium Content (ppm):</label>
-    <input type="text" name="pContent" id="pContent"></input><br><br>
+    <input type="text" name="kContent" id="kContent"></input><br><br>
 
     <!Asks for PH Level>
     <label for="pHLevel">pH Level: </label>
     <input type="text" name="pHLevel" id="pHLevel"></input><br><br>
 
     <!Submit Button>
-    <button type="button" onclick="saveDataToFile()">Click To Save</button><br><br>
+    <button type="button" onclick="createObject()">Click To Save</button><br><br>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <script src="Objects/soilObject.js" type="module"></script>
-    <script src="script.js" language="Javascript"></script>
+    <script src="script.js"></script>
   </body>
 </html>
