@@ -272,6 +272,35 @@
         left: 900px;
         z-index: 204;
       }
+      .help {
+        position: fixed;
+        bottom: 15px;
+        right: 30px;
+        width: 300px;
+        height: 100px;
+        border-radius: 15px;
+        border-style: solid;
+        border-width: thick;
+        border-color: black;
+        background-color: white;
+        z-index: 1000;
+      }
+      .tutorial {
+        position: absolute;
+        font-size: 25px;
+        font-family: Verdana;
+        color: black;
+        top: -10px;
+        left: 80px;
+      }
+      .tutorialText {
+        position: absolute;
+        font-size: 15px;
+        font-weight: normal;
+        font-family: Verdana;
+        color: black;
+        top: 40px;
+      }
     </style>
   </head>
   <body>
@@ -313,5 +342,13 @@
     <p class="benefit2Para">Our software will be able to watch over your farm at all times, taking stress off your busy schedule and letting you focus on more important things in your life.</p>
     <p class="footerText">Join the Community.</p>
     <p class="footerText2">Stay up to date with the latest news through our social media outlets.</p>
+    <div class="help">
+      <a href="tutorial.html">
+        <p class="tutorial">Need Help?</p>
+      </a>
+      <a href="tutorial.html">
+        <p class="tutorialText">Click here for a tutorial on how to use Soil Assistant.</p>
+      </a>
+    </div>
   </body>
 </html>
