@@ -9,6 +9,8 @@ Create new plot:
 My plots:
 - Able to use info inputted into survey to display info
   - Required info: field name, soil health, dimensions, recommendations
+- Able to add multiple instances of <div class="border></div> (the info box) with different info, each one directly under the previous (this is to accomodate for multiple plots)
+- Able to make edits to the plots and save the changes
 
 My account:
 - Able to use data inputted from user through sign up and display it on account info
