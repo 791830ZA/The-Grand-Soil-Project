@@ -457,9 +457,6 @@
       <a href="newPlot.html">
         <p class="newPlot">Create new plot</p>
       </a>
-      <a href="myPlots.html">
-        <p class="plot">My plots</p>
-      </a>
       <a href="myAccount.html">
         <p class="account">My account</p>
       </a>
@@ -485,18 +482,18 @@
 
     <!Insert question 2>
     <p class="Q2">How dark is Your soil?</p><br>
-    <input type = "radio" id = "veryDark" name="soilColour" value="Very Dark">
+    <input type = "radio" id = "veryDark" name="colour" value="Very Dark">
     <label for="veryDark"><img src="https://thumbs.dreamstime.com/b/dark-soil-as-very-nice-natural-background-29877018.jpg" alt="Very Dark Soil" style="width:100px;height:100px;"></label><br>
-    <input type = "radio" id = "dark" name="soilColour" value="dark">
+    <input type = "radio" id = "dark" name="colour" value="dark">
     <label for="dark"><img src="https://image.shutterstock.com/image-photo/black-fresh-soil-groumd-abstract-260nw-1944985660.jpg" alt="Dark Soil" style="width:100px;height:100px;"></label><br>
-    <input type = "radio" id = "light" name="soilColour" value="light">
+    <input type = "radio" id = "light" name="colour" value="light">
     <label for="light"><img src="https://www.nature-and-garden.com/wp-content/uploads/sites/4/2017/10/garden-soil-type.jpg" alt="Light Soil" style="width:100px;height:100px;"></label><br><br>
 
     <!Insert question 3>
     <p class="Q3">Have you tested your soil for nutrients?</p><br>
-    <input type="radio" id="tested" name="soilTest" value="true">
+    <input type="radio" id="tested" name="test" value="true">
     <label for="tested">Yes</label><br>
-    <input type="radio" id="notTested" name="soilTest" value="false">
+    <input type="radio" id="notTested" name="test" value="false">
     <label for="notTested">No</label><br><br>
 
     <!Insert question 4>
@@ -517,7 +514,7 @@
 
     <!Insert question 6>
     <p class="Q6">Name your field!</p>
-    <input type="text" id="name" name="name"></input><br><br>
+    <input type="text" id="fieldName" name="fieldName"></input><br><br>
 
     <!Submit Button>
     <button class="submit" type="button" onclick="checkCorrectVariables()"><p class="submitText">Submit</p></button><br><br>
@@ -526,9 +523,10 @@
     <button class="display"type="button" onclick="displayLands()"><p class="displayText"> Display Land</p></button><br><br>
 
     <!The Output of the display>
-    <div id="Lands Display" class="landsDisplay"></div>
+    <div id="Lands Display" class="landsDisplay">
+      <p class="landDisplayText"></p>
+    </div>
 
-    <script src="script.js"></script>
     <!Insert footer>
     <div class="footer"></div>
   </body>
