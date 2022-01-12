@@ -432,7 +432,7 @@
         background-color: purple;
       }
 
-      /*formatting for text in land display button*/
+      /*Formatting for text in land display button*/
       .displayText {
         position: absolute;
         top: -7px;
@@ -447,6 +447,12 @@
         position: absolute;
         top: 1910px;
         width: 100%;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+      
+      /*Formatting for text in land display output*/
+      .landDisplayText {
         font-size: 20px;
         font-family: Verdana;
       }
@@ -536,7 +542,9 @@
     <button class="display"type="button" onclick="displayLands()"><p class="displayText"> Display Land</p></button><br><br>
 
     <!The Output of the display>
-    <div id="Lands Display" class="landsDisplay"></div>
+    <div id="Lands Display" class="landsDisplay">
+      <p class="landDisplayText"></p>
+    </div>
 
     <!Insert footer>
     <div class="footer"></div>
