@@ -7,7 +7,7 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="icon" href="images/logo2.png">
     <style>
-      
+
       /*Formatting for logo at top left*/
       .logo {
         position: fixed;
@@ -392,7 +392,7 @@
       }
 
       /*Formatting for field name box*/
-      input[name="fieldName"] {
+      input[name="name"] {
         position: absolute;
         top: 1680px;
         left: 20px;
@@ -432,6 +432,7 @@
     </style>
   </head>
   <body>
+    
     <!Insert menu>
     <div class="topRectangle">
       <a href="newPlot.html">
@@ -451,63 +452,57 @@
     </div>
 
     <!Insert soil survey>
-    <form id="soilSurvey">
-      <!Insert question 1>
-      <p class="Q1">What type of soil do you currently have?</p><br>
-      <input type="radio" id="clay" name="soilType" value = "Clay">
-      <label for = "clay">Clay Soil</label><br>
-      <input type = "radio" id = "loamy" name="soilType" value = "Loamy">
-      <label for = "loamy">Loamy Soil</label><br>
-      <input type = "radio" id = "sandy" name = "soilType" value = "Sandy">
-      <label for = "sandy">Sandy Soil</label><br>
-      <a href = "https://www.gardenersworld.com/plants/find-out-your-soil-type/" target="_blank">
-        <p class="soilLink">Don't know what type your soil is? Check how to test it right here!</p>
-      </a><br><br>
+    <!Insert question 1>
+    <p class="Q1">What type of soil do you currently have?</p><br>
+    <input type="radio" id="clay" name="soilType" value = "Clay">
+    <label for = "clay">Clay Soil</label><br>
+    <input type = "radio" id = "loamy" name="soilType" value = "Loamy">
+    <label for = "loamy">Loamy Soil</label><br>
+    <input type = "radio" id = "sandy" name = "soilType" value = "Sandy">
+    <label for = "sandy">Sandy Soil</label><br>
+    <a href = "https://www.gardenersworld.com/plants/find-out-your-soil-type/" target="_blank">
+      <p class="soilLink">Don't know what type your soil is? Check how to test it right here!</p>
+    </a><br><br>
 
-      <!Insert question 2>
-      <p class="Q2">How dark is Your soil?</p><br>
-      <input type = "radio" id = "veryDark" name="colour" value="Very Dark">
-      <label for="veryDark"><img src="https://thumbs.dreamstime.com/b/dark-soil-as-very-nice-natural-background-29877018.jpg" alt="Very Dark Soil" style="width:100px;height:100px;"></label><br>
-      <input type = "radio" id = "dark" name="colour" value="dark">
-      <label for="dark"><img src="https://image.shutterstock.com/image-photo/black-fresh-soil-groumd-abstract-260nw-1944985660.jpg" alt="Dark Soil" style="width:100px;height:100px;"></label><br>
-      <input type = "radio" id = "light" name="colour" value="light">
-      <label for="light"><img src="https://www.nature-and-garden.com/wp-content/uploads/sites/4/2017/10/garden-soil-type.jpg" alt="Light Soil" style="width:100px;height:100px;"></label><br><br>
+    <!Insert question 2>
+    <p class="Q2">How dark is Your soil?</p><br>
+    <input type = "radio" id = "veryDark" name="soilColour" value="Very Dark">
+    <label for="veryDark"><img src="https://thumbs.dreamstime.com/b/dark-soil-as-very-nice-natural-background-29877018.jpg" alt="Very Dark Soil" style="width:100px;height:100px;"></label><br>
+    <input type = "radio" id = "dark" name="soilColour" value="dark">
+    <label for="dark"><img src="https://image.shutterstock.com/image-photo/black-fresh-soil-groumd-abstract-260nw-1944985660.jpg" alt="Dark Soil" style="width:100px;height:100px;"></label><br>
+    <input type = "radio" id = "light" name="soilColour" value="light">
+    <label for="light"><img src="https://www.nature-and-garden.com/wp-content/uploads/sites/4/2017/10/garden-soil-type.jpg" alt="Light Soil" style="width:100px;height:100px;"></label><br><br>
 
-      <!Insert question 3>
-      <p class="Q3">Have you tested your soil for nutrients?</p><br>
-      <input type="radio" id="tested" name="test" value="true">
-      <label for="tested">Yes</label><br>
-      <input type="radio" id="notTested" name="test" value="false">
-      <label for="notTested">No</label><br><br>
+    <!Insert question 3>
+    <p class="Q3">Have you tested your soil for nutrients?</p><br>
+    <input type="radio" id="tested" name="soilTest" value="true">
+    <label for="tested">Yes</label><br>
+    <input type="radio" id="notTested" name="soilTest" value="false">
+    <label for="notTested">No</label><br><br>
 
-      <!Insert question 4>
-      <p class="Q4">What are the dimensions of the field?</p>
-      <label for="length">Length (in meters):</label>
-      <input type="text" name="length" id="length"></input><br><br>
-      <label for="width">Width (in meters):</label>
-      <input type="text" name="width" id="width"></input><br><br>
+    <!Insert question 4>
+    <p class="Q4">What are the dimensions of the field?</p>
+    <label for="length">Length (in meters):</label>
+    <input type="text" name="length" id="length"></input><br><br>
+    <label for="width">Width (in meters):</label>
+    <input type="text" name="width" id="width"></input><br><br>
 
-      <!Insert question 5>
-      <p class="Q5">Please specify the amount of each nutrient present in your farm in ppm.</p>
-      <label for="nContent">Nitrogen Content:</label>
-      <input type="text" id="nContent" name="nContent"></input><br><br>
-      <label for="pContent">Phosphorus Content:</label>
-      <input type="text" id="pContent" name="pContent"></input><br><br>
-      <label for="kContent">Potassium Content:</label>
-      <input type="text" id="kContent" name="kContent"></input><br><br>
+    <!Insert question 5>
+    <p class="Q5">Please specify the amount of each nutrient present in your farm in ppm.</p>
+    <label for="nContent">Nitrogen Content:</label>
+    <input type="text" id="nContent" name="nContent"></input><br><br>
+    <label for="pContent">Phosphorus Content:</label>
+    <input type="text" id="pContent" name="pContent"></input><br><br>
+    <label for="kContent">Potassium Content:</label>
+    <input type="text" id="kContent" name="kContent"></input><br><br>
 
-      <!Insert question 6>
-      <p class="Q6">Name your field!</p>
-      <input type="text" id="fieldName" name="fieldName"></input><br><br>
-    </form>
+    <!Insert question 6>
+    <p class="Q6">Name your field!</p>
+    <input type="text" id="name" name="name"></input><br><br>
 
-    <!Insert submit button>
-    <div class="submit">
-      <a href="myPlots.html">
-        <p class="submitText">Submit</p>
-      </a>
-    </div>
-
+    <!Submit Button>
+    <button class="submit" type="button" onclick="checkCorrectVariables()"><p class="submitText">Submit</p></button><br><br>
+    <script src="script.js"></script>
     <!Insert footer>
     <div class="footer"></div>
   </body>
