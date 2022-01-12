@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Create New Plot</title>
+    <title>Learn How to Use Soil Assistant Step-by-Step</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="icon" href="images/logo2.png">
     <style>
@@ -18,67 +18,67 @@
         z-index: 100;
       }
 
-      /*Formatting for "Create new plot" button at top*/
-      .newPlot {
+      /*Formatting for "Log in" button at top*/
+      .login {
         position: fixed;
         top: 15px;
-        right: 500px;
+        right: 300px;
         font-family: Calibri;
         font-size: 20px;
         color: white;
         z-index: 100;
       }
 
-      /*Creates underline when mouse is hovered above "Create new plot" button*/
-      .newPlot:hover {
+      /*Creates underline when mouse is hovered above "Log in" button*/
+      .login:hover {
         text-decoration: underline;
       }
 
-      /*Formatting for "My plots" button at top*/
-      .plot {
+      /*Formatting for "Sign up" button at top*/
+      .signup {
         position: fixed;
         top: 15px;
-        right: 370px;
+        right: 185px;
         font-family: Calibri;
         font-size: 20px;
         color: white;
         z-index: 100;
       }
 
-      /*Creates underline when mouse is hovered above "My plots" button*/
-      .plot:hover {
+      /*Creates underline when mouse is hovered above "Sign up" button*/
+      .signup:hover {
         text-decoration: underline;
       }
 
-      /*Formatting for "My account" button at top*/
-      .account {
+      /*Formatting for "Community" button at top*/
+      .community {
         position: fixed;
         top: 15px;
-        right: 225px;
+        right: 50px;
         font-family: Calibri;
         font-size: 20px;
         color: white;
         z-index: 100;
       }
 
-      /*Creates underline when mouse is hovered above "My account" button*/
-      .account:hover {
+      /*Creates underline when mouse is hovered above "Community" button*/
+      .community:hover {
         text-decoration: underline;
       }
 
-      /*Formatting for "Log out" button at top*/
-      .logout {
+      /*Formatting for "About us" button at top*/
+      .about {
         position: fixed;
         top: 15px;
-        right: 110px;
+        right: 400px;
         font-family: Calibri;
         font-size: 20px;
         color: white;
         z-index: 100;
       }
 
-      /*Creates underline when mouse is hovered above "Log out" button*/
-      .logout:hover {
+      /*Creates underline when mouse is hovered above "About" button*/
+      .about:hover {
         text-decoration: underline;
       }
 
@@ -89,422 +89,215 @@
         left: 0px;
         width: 100%;
         height: 100px;
-        background-color: #6B8E23;
+        background-color: #355E3B;
         z-index: 20;
       }
-
-      /*Formatting for question 1*/
-      .Q1 {
+      
+      /*Formatting for title text*/
+      .title {
         position: absolute;
-        top: 110px;
+        top: 100px;
+        left: 20px;
+        font-size: 60px;
+        font-family: Verdana;
+        font-weight: bold;
+        color: black;
+      }
+
+      /*Formatting for text underneath title*/
+      .message {
+        position: absolute;
+        top: 320px;
         left: 20px;
         font-size: 30px;
         font-family: Verdana;
+        color: black;
       }
 
-      /*Formatting for clay option*/
-      label[for="clay"] {
+      /*Formatting for step 1 picture*/
+      .pic1 {
         position: absolute;
-        top: 200px;
-        left: 60px;
-        font-size: 20px;
-        font-family: Verdana;  
+        top: 520px;
+        right: 20px;
+        width: 50%;
+        height: auto;
+        border-style: solid;
+        border-color: black;
       }
 
-      /*Formatting for clay option bubble*/
-      input[id="clay"] {
-        position: absolute;
-        top: 200px;
-        left: 20px;
-        width: 20px;
-        height: 20px;
-      }
-
-      /*Formatting for loamy option*/
-      label[for="loamy"] {
-        position: absolute;
-        top: 230px;
-        left: 60px; 
-        font-size: 20px;
-        font-family: Verdana; 
-      }
-
-      /*Formatting for loamy option bubble*/
-      input[id="loamy"] {
-        position: absolute;
-        top: 230px;
-        left: 20px;
-        width: 20px;
-        height: 20px;
-      }
-
-      /*Formatting for sandy option*/
-      label[for="sandy"] {
-        position: absolute;
-        top: 260px;
-        left: 60px;  
-        font-size: 20px;
-        font-family: Verdana; 
-      }
-
-      /*Formatting for sandy option bubble*/
-      input[id="sandy"] {
-        position: absolute;
-        top: 260px;
-        left: 20px;
-        width: 20px;
-        height: 20px;
-      }
-
-      /*Formatting for link to soil type idenification page*/
-      .soilLink {
-        position: absolute;
-        top: 290px;
-        left: 20px;
-        font-family: Verdana;
-        font-size: 20px;
-        color: green;
-      }
-
-      /*Formatting for question 2*/
-      .Q2 {
-        position: absolute;
-        top: 390px;
-        left: 20px;
-        font-size: 30px;
-        font-family: Verdana;
-      }
-
-      /*Formatting for very dark option*/
-      label[for="veryDark"] {
-        position: absolute;
-        top: 470px;
-        left: 60px;
-        width: 50px;
-        height: 50px; 
-      }
-
-      /*Formatting for very dark option bubble*/
-      input[id="veryDark"] {
-        position: absolute;
-        top: 500px;
-        left: 20px;
-        width: 20px;
-        height: 20px;
-      }
-
-      /*Formatting for dark option*/
-      label[for="dark"] {
+      /*Formatting for step 1 text*/
+      .instr1 {
         position: absolute;
         top: 580px;
-        left: 60px; 
-        font-size: 20px;
-        font-family: Verdana; 
-      }
-
-      /*Formatting for dark option bubble*/
-      input[id="dark"] {
-        position: absolute;
-        top: 610px;
         left: 20px;
-        width: 20px;
-        height: 20px;
-      }
-
-      /*Formatting for light option*/
-      label[for="light"] {
-        position: absolute;
-        top: 680px;
-        left: 60px;  
+        width: 45%;
         font-size: 20px;
-        font-family: Verdana; 
+        font-family: Verdana;
       }
 
-      /*Formatting for light option bubble*/
-      input[id="light"] {
-        position: absolute;
-        top: 710px;
-        left: 20px;
-        width: 20px;
-        height: 20px;
-      }
-
-      /*Formatting for question 3*/
-      .Q3 {
+      /*Formatting for step 2 picture*/
+      .pic2 {
         position: absolute;
         top: 860px;
-        left: 20px;
-        font-size: 30px;
-        font-family: Verdana;
+        right: 20px;
+        width: 50%;
+        height: auto;
+        border-style: solid;
+        border-color: black;
       }
 
-      /*Formatting for tested option bubble*/
-      input[id=tested] {
-        position: absolute;
-        top: 940px;
-        left: 20px;
-        width: 20px;
-        height: 20px;
-      }
-
-      /*Formatting for tested option*/
-      label[for=tested]{
-        position: absolute;
-        top: 940px;
-        left: 60px;
-        font-size: 20px;
-        font-family: Verdana;
-      }
-
-      /*Formatting for not tested option bubble*/
-      input[id=notTested] {
+      /*Formatting for step 2 text*/
+      .instr2 {
         position: absolute;
         top: 970px;
         left: 20px;
-        width: 20px;
-        height: 20px;
-      }
-
-      /*Formatting for not tested option*/
-      label[for=notTested] {
-        position: absolute;
-        top: 970px;
-        left: 60px;
+        width: 45%;
         font-size: 20px;
         font-family: Verdana;
       }
 
-      /*Formatting for question 4*/
-      .Q4 {
+      /*Formatting for step 3 picture*/
+      .pic3 {
         position: absolute;
-        top: 1070px;
-        left: 20px;
-        font-size: 30px;
-        font-family: Verdana;
+        top: 1300px;
+        right: 20px;
+        width: 50%;
+        height: auto;
+        border-style: solid;
+        border-color: black;
       }
 
-      /*Formatting for length box*/
-      input[id=length] {
-        position: absolute;
-        top: 1160px;
-        left: 220px;
-        width: 100px;
-        height: 20px;
-      }
-
-      /*Formatting for length text*/
-      label[for=length] {
-        position: absolute;
-        top: 1160px;
-        left: 20px;
-        font-size: 20px;
-        font-family: Verdana;
-      }
-
-      /*Formatting for width box*/
-      input[id=width] {
-        position: absolute;
-        top: 1210px;
-        left: 220px;
-        width: 100px;
-        height: 20px;
-      }
-
-      /*Formatting for width text*/
-      label[for=width] {
-        position: absolute;
-        top: 1210px;
-        left: 20px;
-        font-size: 20px;
-        font-family: Verdana;
-      }
-
-      /*Formatting for question 5*/
-      .Q5 {
-        position: absolute;
-        top: 1310px;
-        left: 20px;
-        font-size: 30px;
-        font-family: Verdana;
-      }
-
-      /*Formatting for nitrogen content box*/
-      input[id=nContent] {
-        position: absolute;
-        top: 1400px;
-        left: 240px;
-        width: 100px;
-        height: 20px;
-      }
-
-      /*Formatting for nitrogen content text*/
-      label[for=nContent] {
+      /*Formatting for step 3 text*/
+      .instr3 {
         position: absolute;
         top: 1400px;
         left: 20px;
+        width: 45%;
         font-size: 20px;
         font-family: Verdana;
       }
 
-      /*Formatting for phosphorus content box*/
-      input[id=pContent] {
+      /*Formatting for step 4 picture*/
+      .pic4 {
         position: absolute;
-        top: 1450px;
-        left: 240px;
-        width: 100px;
-        height: 20px;
+        top: 1700px;
+        right: 20px;
+        width: 50%;
+        height: auto;
+        border-style: solid;
+        border-color: black;
       }
 
-      /*Formatting for phosphorus content text*/
-      label[for=pContent] {
-        position: absolute;
-        top: 1450px;
-        left: 20px;
-        font-size: 20px;
-        font-family: Verdana;
-      }
-
-      /*Formatting for potassium content box*/
-      input[id=kContent] {
-        position: absolute;
-        top: 1500px;
-        left: 240px;
-        width: 100px;
-        height: 20px;
-      }
-
-      /*Formatting for potassium content text*/
-      label[for=kContent] {
-        position: absolute;
-        top: 1500px;
-        left: 20px;
-        font-size: 20px;
-        font-family: Verdana;
-      }
-
-      /*Formatting for question 6*/
-      .Q6 {
-        position: absolute;
-        top: 1600px;
-        left: 20px;
-        font-family: Verdana;
-        font-size: 30px;
-      }
-
-      /*Formatting for field name box*/
-      input[name="name"] {
-        position: absolute;
-        top: 1680px;
-        left: 20px;
-        width: 400px;
-        height: 30px;
-      }
-
-      /*Formatting for submit button*/
-      .submit {
+      /*Formatting for step 4 text*/
+      .instr4 {
         position: absolute;
         top: 1780px;
         left: 20px;
-        width: 200px;
-        height: 80px;
-        border-radius: 10px;
-        background-color: green;
+        width: 45%;
+        font-size: 20px;
+        font-family: Verdana;
       }
 
-      /*Formatting for submit button text*/
-      .submitText {
+      /*Formatting for step 5 picture*/
+      .pic5 {
         position: absolute;
-        top: -5px;
-        left: 45px;
-        font-size: 30px;
+        top: 2100px;
+        right: 20px;
+        width: 50%;
+        height: auto;
+        border-style: solid;
+        border-color: black;
+      }
+
+      /*Formatting for step 5 text*/
+      .instr5 {
+        position: absolute;
+        top: 2200px;
+        left: 20px;
+        width: 45%;
+        font-size: 20px;
         font-family: Verdana;
-        color: white;
+      }
+
+      /*Formatting for step 6 picture*/
+      .pic6 {
+        position: absolute;
+        top: 2500px;
+        right: 20px;
+        width: 50%;
+        height: auto;
+        border-style: solid;
+        border-color: black;
+      }
+
+      /*Formatting for step 6 text*/
+      .instr6 {
+        position: absolute;
+        top: 2600px;
+        left: 20px;
+        width: 45%;
+        font-size: 20px;
+        font-family: Verdana;
       }
 
       /*Formatting for footer*/
       .footer {
         position: absolute;
-        top: 1880px;
+        top: 2800px;
         width: 50%;
         height: 20px;
-        bakcground-color: white;
+        background-color: white;
       }
     </style>
   </head>
   <body>
-    
     <!Insert menu>
     <div class="topRectangle">
-      <a href="newPlot.html">
-        <p class="newPlot">Create new plot</p>
+      <a href="aboutUs.html">
+        <p class="about">About us</p>
       </a>
-      <a href="myPlots.html">
-        <p class="plot">My plots</p>
+      <a href="login.html">
+        <p class="login">Log in</p>
       </a>
-      <a href="myAccount.html">
-        <p class="account">My account</p>
+      <a href="signup.html">
+        <p class="signup">Sign up</p>
+      </a>
+      <a href="community.html">
+        <p class="community">Community</p>
       </a>
       <a href="index.html">
-        <p class="logout">Log out</p>
-      <a href="mainMenu.html">
         <img class="logo" src="images/logo.png">
       </a>
     </div>
 
-    <p>Plot couldn't be saved! You have to make sure that you selected all options and have inserted numbers in the width and length section!</p>
+    <!Insert title and message>
+    <p class="title">Welcome, and thank you for using Soil Assistant!</p>
+    <p class="message">Soil Assistant is a great tool for helping you manage your farmland. If you don't know where to start, don't worry – we'll cover all you need to know about using this program in this tutorial.</p>
 
-    <!Insert soil survey>
-    <!Insert question 1>
-    <p class="Q1">What type of soil do you currently have?</p><br>
-    <input type="radio" id="clay" name="soilType" value = "Clay">
-    <label for = "clay">Clay Soil</label><br>
-    <input type = "radio" id = "loamy" name="soilType" value = "Loamy">
-    <label for = "loamy">Loamy Soil</label><br>
-    <input type = "radio" id = "sandy" name = "soilType" value = "Sandy">
-    <label for = "sandy">Sandy Soil</label><br>
-    <a href = "https://www.gardenersworld.com/plants/find-out-your-soil-type/" target="_blank">
-      <p class="soilLink">Don't know what type your soil is? Check how to test it right here!</p>
-    </a><br><br>
+    <!Insert step 1>
+    <img class="pic1" src="images/tutorial1.JPG">
+    <p class="instr1">First, you need an account. If you don't have an account, make sure to click "Sign up". If you already have one, click "Log in".</p>
 
-    <!Insert question 2>
-    <p class="Q2">How dark is Your soil?</p><br>
-    <input type = "radio" id = "veryDark" name="soilColour" value="Very Dark">
-    <label for="veryDark"><img src="https://thumbs.dreamstime.com/b/dark-soil-as-very-nice-natural-background-29877018.jpg" alt="Very Dark Soil" style="width:100px;height:100px;"></label><br>
-    <input type = "radio" id = "dark" name="soilColour" value="dark">
-    <label for="dark"><img src="https://image.shutterstock.com/image-photo/black-fresh-soil-groumd-abstract-260nw-1944985660.jpg" alt="Dark Soil" style="width:100px;height:100px;"></label><br>
-    <input type = "radio" id = "light" name="soilColour" value="light">
-    <label for="light"><img src="https://www.nature-and-garden.com/wp-content/uploads/sites/4/2017/10/garden-soil-type.jpg" alt="Light Soil" style="width:100px;height:100px;"></label><br><br>
+    <!Insert step 2>
+    <img class="pic2" src="images/tutorial2.JPG">
+    <p class="instr2">Fill in all the boxes on the sign up page. Remember your username and password, as they will be needed to log in. After filling all the boxes, press "Create Account".</p>
 
-    <!Insert question 3>
-    <p class="Q3">Have you tested your soil for nutrients?</p><br>
-    <input type="radio" id="tested" name="soilTest" value="true">
-    <label for="tested">Yes</label><br>
-    <input type="radio" id="notTested" name="soilTest" value="false">
-    <label for="notTested">No</label><br><br>
+    <!Insert step 3>
+    <img class="pic3" src="images/tutorial3.JPG">
+    <p class="instr3">You will be directed to your account's main menu. To set up your farm, click the "Create new plot" button.</p>
 
-    <!Insert question 4>
-    <p class="Q4">What are the dimensions of the field?</p>
-    <label for="length">Length (in meters):</label>
-    <input type="text" name="length" id="length"></input><br><br>
-    <label for="width">Width (in meters):</label>
-    <input type="text" name="width" id="width"></input><br><br>
+    <!Insert step 4>
+    <img class="pic4" src="images/tutorial4.JPG">
+    <p class="instr4">Complete all questions in the survey. Please answer the questions properly. If you have tested for nutrients (recommended), be sure to include amounts of each nutrient in the shown question. If not, leave it blank, and we will decide for you. After you are done, click the "Submit" button.</p>
 
-    <!Insert question 5>
-    <p class="Q5">Please specify the amount of each nutrient present in your farm in ppm. Not required if you didn't test your soil.</p>
-    <label for="nContent">Nitrogen Content:</label>
-    <input type="text" id="nContent" name="nContent"></input><br><br>
-    <label for="pContent">Phosphorus Content:</label>
-    <input type="text" id="pContent" name="pContent"></input><br><br>
-    <label for="kContent">Potassium Content:</label>
-    <input type="text" id="kContent" name="kContent"></input><br><br>
+    <!Insert step 5>
+    <img class="pic5" src="images/tutorial5.JPG">
+    <p class="instr5">Your farm setup is done! If you want to edit your information, click the edit button and make the changes and edits you need.</p>
 
-    <!Insert question 6>
-    <p class="Q6">Name your field!</p>
-    <input type="text" id="name" name="name"></input><br><br>
+    <!Insert step 6>
+    <img class="pic6" src="images/tutorial6.JPG">
+    <p class="instr6">To edit your profile information, you can press "My account" and make changes.</p>
 
-    <!Submit Button>
-    <button class="submit" type="button" onclick="checkCorrectVariables()"><p class="submitText">Submit</p></button><br><br>
-    <script src="script.js"></script>
     <!Insert footer>
     <div class="footer"></div>
   </body>
