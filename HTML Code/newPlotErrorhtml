@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Create New Plot</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="images/logo2.png">
+    <style>
+
+      /*Formatting for logo at top left*/
+      .logo {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        height: 80px;
+        width: auto;
+        z-index: 100;
+      }
+
+      /*Formatting for "Create new plot" button at top*/
+      .newPlot {
+        position: fixed;
+        top: 15px;
+        right: 370px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+
+      /*Creates underline when mouse is hovered above "Create new plot" button*/
+      .newPlot:hover {
+        text-decoration: underline;
+      }
+
+      /*Formatting for "My account" button at top*/
+      .account {
+        position: fixed;
+        top: 15px;
+        right: 225px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+
+      /*Creates underline when mouse is hovered above "My account" button*/
+      .account:hover {
+        text-decoration: underline;
+      }
+
+      /*Formatting for "Log out" button at top*/
+      .logout {
+        position: fixed;
+        top: 15px;
+        right: 110px;
+        font-family: Calibri;
+        font-size: 20px;
+        color: white;
+        z-index: 100;
+      }
+
+      /*Creates underline when mouse is hovered above "Log out" button*/
+      .logout:hover {
+        text-decoration: underline;
+      }
+
+      /*Formatting for menu at top*/
+      .topRectangle {
+        position: fixed;
+        top: 0;
+        left: 0px;
+        width: 100%;
+        height: 100px;
+        background-color: #6B8E23;
+        z-index: 20;
+      }
+
+      /*Formattin for error code*/
+      .error {
+        position: absolute;
+        top: 110px;
+        left: 20px;
+        font-size: 30px;
+        font-family: Verdana;
+        color: red;
+      }
+
+      /*Formatting for question 1*/
+      .Q1 {
+        position: absolute;
+        top: 310px;
+        left: 20px;
+        font-size: 30px;
+        font-family: Verdana;
+      }
+
+      /*Formatting for clay option*/
+      label[for="clay"] {
+        position: absolute;
+        top: 400px;
+        left: 60px;
+        font-size: 20px;
+        font-family: Verdana;  
+      }
+
+      /*Formatting for clay option bubble*/
+      input[id="clay"] {
+        position: absolute;
+        top: 400px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+
+      /*Formatting for loamy option*/
+      label[for="loamy"] {
+        position: absolute;
+        top: 430px;
+        left: 60px; 
+        font-size: 20px;
+        font-family: Verdana; 
+      }
+
+      /*Formatting for loamy option bubble*/
+      input[id="loamy"] {
+        position: absolute;
+        top: 430px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+
+      /*Formatting for sandy option*/
+      label[for="sandy"] {
+        position: absolute;
+        top: 460px;
+        left: 60px;  
+        font-size: 20px;
+        font-family: Verdana; 
+      }
+
+      /*Formatting for sandy option bubble*/
+      input[id="sandy"] {
+        position: absolute;
+        top: 460px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+
+      /*Formatting for link to soil type idenification page*/
+      .soilLink {
+        position: absolute;
+        top: 490px;
+        left: 20px;
+        font-family: Verdana;
+        font-size: 20px;
+        color: green;
+      }
+
+      /*Formatting for question 2*/
+      .Q2 {
+        position: absolute;
+        top: 590px;
+        left: 20px;
+        font-size: 30px;
+        font-family: Verdana;
+      }
+
+      /*Formatting for very dark option*/
+      label[for="veryDark"] {
+        position: absolute;
+        top: 670px;
+        left: 60px;
+        width: 50px;
+        height: 50px; 
+      }
+
+      /*Formatting for very dark option bubble*/
+      input[id="veryDark"] {
+        position: absolute;
+        top: 700px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+
+      /*Formatting for dark option*/
+      label[for="dark"] {
+        position: absolute;
+        top: 780px;
+        left: 60px; 
+        font-size: 20px;
+        font-family: Verdana; 
+      }
+
+      /*Formatting for dark option bubble*/
+      input[id="dark"] {
+        position: absolute;
+        top: 810px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+
+      /*Formatting for light option*/
+      label[for="light"] {
+        position: absolute;
+        top: 880px;
+        left: 60px;  
+        font-size: 20px;
+        font-family: Verdana; 
+      }
+
+      /*Formatting for light option bubble*/
+      input[id="light"] {
+        position: absolute;
+        top: 910px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+
+      /*Formatting for question 3*/
+      .Q3 {
+        position: absolute;
+        top: 1060px;
+        left: 20px;
+        font-size: 30px;
+        font-family: Verdana;
+      }
+
+      /*Formatting for tested option bubble*/
+      input[id=tested] {
+        position: absolute;
+        top: 1140px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+
+      /*Formatting for tested option*/
+      label[for=tested]{
+        position: absolute;
+        top: 1140px;
+        left: 60px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+
+      /*Formatting for not tested option bubble*/
+      input[id=notTested] {
+        position: absolute;
+        top: 1170px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+      }
+
+      /*Formatting for not tested option*/
+      label[for=notTested] {
+        position: absolute;
+        top: 1170px;
+        left: 60px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+
+      /*Formatting for question 4*/
+      .Q4 {
+        position: absolute;
+        top: 1270px;
+        left: 20px;
+        font-size: 30px;
+        font-family: Verdana;
+      }
+
+      /*Formatting for length box*/
+      input[id=length] {
+        position: absolute;
+        top: 1360px;
+        left: 220px;
+        width: 100px;
+        height: 20px;
+      }
+
+      /*Formatting for length text*/
+      label[for=length] {
+        position: absolute;
+        top: 1360px;
+        left: 20px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+
+      /*Formatting for width box*/
+      input[id=width] {
+        position: absolute;
+        top: 1410px;
+        left: 220px;
+        width: 100px;
+        height: 20px;
+      }
+
+      /*Formatting for width text*/
+      label[for=width] {
+        position: absolute;
+        top: 1410px;
+        left: 20px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+
+      /*Formatting for question 5*/
+      .Q5 {
+        position: absolute;
+        top: 1510px;
+        left: 20px;
+        font-size: 30px;
+        font-family: Verdana;
+      }
+
+      /*Formatting for nitrogen content box*/
+      input[id=nContent] {
+        position: absolute;
+        top: 1630px;
+        left: 240px;
+        width: 100px;
+        height: 20px;
+      }
+
+      /*Formatting for nitrogen content text*/
+      label[for=nContent] {
+        position: absolute;
+        top: 1630px;
+        left: 20px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+
+      /*Formatting for phosphorus content box*/
+      input[id=pContent] {
+        position: absolute;
+        top: 1680px;
+        left: 240px;
+        width: 100px;
+        height: 20px;
+      }
+
+      /*Formatting for phosphorus content text*/
+      label[for=pContent] {
+        position: absolute;
+        top: 1680px;
+        left: 20px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+
+      /*Formatting for potassium content box*/
+      input[id=kContent] {
+        position: absolute;
+        top: 1730px;
+        left: 240px;
+        width: 100px;
+        height: 20px;
+      }
+
+      /*Formatting for potassium content text*/
+      label[for=kContent] {
+        position: absolute;
+        top: 1730px;
+        left: 20px;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+
+      /*Formatting for question 6*/
+      .Q6 {
+        position: absolute;
+        top: 1830px;
+        left: 20px;
+        font-family: Verdana;
+        font-size: 30px;
+      }
+
+      /*Formatting for field name box*/
+      input[name="name"] {
+        position: absolute;
+        top: 1910px;
+        left: 20px;
+        width: 400px;
+        height: 30px;
+      }
+
+      /*Formatting for submit button*/
+      .submit {
+        position: absolute;
+        top: 2010px;
+        left: 20px;
+        width: 200px;
+        height: 80px;
+        border-radius: 10px;
+        background-color: green;
+      }
+
+      /*Formatting for submit button text*/
+      .submitText {
+        position: absolute;
+        top: -5px;
+        left: 45px;
+        font-size: 30px;
+        font-family: Verdana;
+        color: white;
+      }
+
+      /*Formatting for footer*/
+      .footer {
+        position: absolute;
+        top: 2110px;
+        width: 50%;
+        height: 20px;
+        bakcground-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <!Insert menu>
+    <div class="topRectangle">
+      <a href="newPlot.html">
+        <p class="newPlot">Create new plot</p>
+      </a>
+      <a href="myPlots.html">
+        <p class="plot">My plots</p>
+      </a>
+      <a href="myAccount.html">
+        <p class="account">My account</p>
+      </a>
+      <a href="index.html">
+        <p class="logout">Log out</p>
+      <a href="mainMenu.html">
+        <img class="logo" src="images/logo.png">
+      </a>
+    </div>
+
+    <p class="error">Plot couldn't be saved! You have to make sure that you selected all options and have inserted numbers in the width and length section!</p>
+
+    <!Insert soil survey>
+    <!Insert question 1>
+    <p class="Q1">What type of soil do you currently have?</p><br>
+    <input type="radio" id="clay" name="soilType" value = "Clay">
+    <label for = "clay">Clay Soil</label><br>
+    <input type = "radio" id = "loamy" name="soilType" value = "Loamy">
+    <label for = "loamy">Loamy Soil</label><br>
+    <input type = "radio" id = "sandy" name = "soilType" value = "Sandy">
+    <label for = "sandy">Sandy Soil</label><br>
+    <a href = "https://www.gardenersworld.com/plants/find-out-your-soil-type/" target="_blank">
+      <p class="soilLink">Don't know what type your soil is? Check how to test it right here!</p>
+    </a><br><br>
+
+    <!Insert question 2>
+    <p class="Q2">How dark is Your soil?</p><br>
+    <input type = "radio" id = "veryDark" name="soilColour" value="Very Dark">
+    <label for="veryDark"><img src="https://thumbs.dreamstime.com/b/dark-soil-as-very-nice-natural-background-29877018.jpg" alt="Very Dark Soil" style="width:100px;height:100px;"></label><br>
+    <input type = "radio" id = "dark" name="soilColour" value="dark">
+    <label for="dark"><img src="https://image.shutterstock.com/image-photo/black-fresh-soil-groumd-abstract-260nw-1944985660.jpg" alt="Dark Soil" style="width:100px;height:100px;"></label><br>
+    <input type = "radio" id = "light" name="soilColour" value="light">
+    <label for="light"><img src="https://www.nature-and-garden.com/wp-content/uploads/sites/4/2017/10/garden-soil-type.jpg" alt="Light Soil" style="width:100px;height:100px;"></label><br><br>
+
+    <!Insert question 3>
+    <p class="Q3">Have you tested your soil for nutrients?</p><br>
+    <input type="radio" id="tested" name="soilTest" value="true">
+    <label for="tested">Yes</label><br>
+    <input type="radio" id="notTested" name="soilTest" value="false">
+    <label for="notTested">No</label><br><br>
+
+    <!Insert question 4>
+    <p class="Q4">What are the dimensions of the field?</p>
+    <label for="length">Length (in meters):</label>
+    <input type="text" name="length" id="length"></input><br><br>
+    <label for="width">Width (in meters):</label>
+    <input type="text" name="width" id="width"></input><br><br>
+
+    <!Insert question 5>
+    <p class="Q5">Please specify the amount of each nutrient present in your farm in ppm. Not required if you didn't test your soil.</p>
+    <label for="nContent">Nitrogen Content:</label>
+    <input type="text" id="nContent" name="nContent"></input><br><br>
+    <label for="pContent">Phosphorus Content:</label>
+    <input type="text" id="pContent" name="pContent"></input><br><br>
+    <label for="kContent">Potassium Content:</label>
+    <input type="text" id="kContent" name="kContent"></input><br><br>
+
+    <!Insert question 6>
+    <p class="Q6">Name your field!</p>
+    <input type="text" id="name" name="name"></input><br><br>
+
+    <!Submit Button>
+    <button class="submit" type="button" onclick="checkCorrectVariables()"><p class="submitText">Submit</p></button><br><br>
+
+    <!Display Lands Button>
+    <button class="display"type="button" onclick="displayLands()"><p class="displayText"> Display Land</p></button><br><br>
+
+    <!The Output of the display>
+    <div id="Lands Display" class="landsDisplay">
+      <p class="landDisplayText"></p>
+    </div>
+    
+    <script src="script.js"></script>
+    <!Insert footer>
+    <div class="footer"></div>
+  </body>
+</html>
