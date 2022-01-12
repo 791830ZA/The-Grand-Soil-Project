@@ -201,7 +201,7 @@ function checkCorrectVariables(){
 };
 
 function displayLands(){
-  var str = "<p class='displayLands'>"
+  var str = "<p class='landDisplayText'>"
   listOfLands.forEach(function(land){
     str += 'Field Name: ' + land.name + "<br>";
     str += "Soil Health: " + land.calcSoilHealth() + "<br>";
