@@ -7,7 +7,7 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="icon" href="images/logo2.png">
     <style>
-
+      
       /*Formatting for logo at top left*/
       .logo {
         position: fixed;
@@ -331,7 +331,7 @@
       /*Formatting for nitrogen content box*/
       input[id=nContent] {
         position: absolute;
-        top: 1400px;
+        top: 1430px;
         left: 240px;
         width: 100px;
         height: 20px;
@@ -340,7 +340,7 @@
       /*Formatting for nitrogen content text*/
       label[for=nContent] {
         position: absolute;
-        top: 1400px;
+        top: 1430px;
         left: 20px;
         font-size: 20px;
         font-family: Verdana;
@@ -349,7 +349,7 @@
       /*Formatting for phosphorus content box*/
       input[id=pContent] {
         position: absolute;
-        top: 1450px;
+        top: 1480px;
         left: 240px;
         width: 100px;
         height: 20px;
@@ -358,7 +358,7 @@
       /*Formatting for phosphorus content text*/
       label[for=pContent] {
         position: absolute;
-        top: 1450px;
+        top: 1480px;
         left: 20px;
         font-size: 20px;
         font-family: Verdana;
@@ -367,7 +367,7 @@
       /*Formatting for potassium content box*/
       input[id=kContent] {
         position: absolute;
-        top: 1500px;
+        top: 1530px;
         left: 240px;
         width: 100px;
         height: 20px;
@@ -376,7 +376,7 @@
       /*Formatting for potassium content text*/
       label[for=kContent] {
         position: absolute;
-        top: 1500px;
+        top: 1530px;
         left: 20px;
         font-size: 20px;
         font-family: Verdana;
@@ -385,16 +385,16 @@
       /*Formatting for question 6*/
       .Q6 {
         position: absolute;
-        top: 1600px;
+        top: 1630px;
         left: 20px;
         font-family: Verdana;
         font-size: 30px;
       }
 
       /*Formatting for field name box*/
-      input[name="name"] {
+      input[name="fieldName"] {
         position: absolute;
-        top: 1680px;
+        top: 1710px;
         left: 20px;
         width: 400px;
         height: 30px;
@@ -403,7 +403,7 @@
       /*Formatting for submit button*/
       .submit {
         position: absolute;
-        top: 1780px;
+        top: 1810px;
         left: 20px;
         width: 200px;
         height: 80px;
@@ -414,27 +414,38 @@
       /*Formatting for submit button text*/
       .submitText {
         position: absolute;
-        top: -5px;
+        top: -7px;
         left: 45px;
         font-size: 30px;
         font-family: Verdana;
         color: white;
       }
 
-      //Formatting the Display Lands Button
-      .display{
-        position: absolute:
+      /*Formatting for land display button*/
+      .display {
+        position: absolute;
+        top: 1810px;
+        left: 300px;
+        width: 250px;
+        height: 80px;
+        border-radius: 10px;
+        background-color: purple;
       }
 
-      //Formatting the display div
-      .landsDisplay{
-        
+      /*formatting for text in land display button*/
+      .displayText {
+        position: absolute;
+        top: -7px;
+        left: 30px;
+        font-size: 30px;
+        font-family: Verdana;
+        color: white;
       }
 
       /*Formatting for footer*/
       .footer {
         position: absolute;
-        top: 1880px;
+        top: 1910px;
         width: 50%;
         height: 20px;
         bakcground-color: white;
@@ -442,7 +453,6 @@
     </style>
   </head>
   <body>
-    
     <!Insert menu>
     <div class="topRectangle">
       <a href="newPlot.html">
@@ -476,18 +486,18 @@
 
     <!Insert question 2>
     <p class="Q2">How dark is Your soil?</p><br>
-    <input type = "radio" id = "veryDark" name="soilColour" value="Very Dark">
+    <input type = "radio" id = "veryDark" name="colour" value="Very Dark">
     <label for="veryDark"><img src="https://thumbs.dreamstime.com/b/dark-soil-as-very-nice-natural-background-29877018.jpg" alt="Very Dark Soil" style="width:100px;height:100px;"></label><br>
-    <input type = "radio" id = "dark" name="soilColour" value="dark">
+    <input type = "radio" id = "dark" name="colour" value="dark">
     <label for="dark"><img src="https://image.shutterstock.com/image-photo/black-fresh-soil-groumd-abstract-260nw-1944985660.jpg" alt="Dark Soil" style="width:100px;height:100px;"></label><br>
-    <input type = "radio" id = "light" name="soilColour" value="light">
+    <input type = "radio" id = "light" name="colour" value="light">
     <label for="light"><img src="https://www.nature-and-garden.com/wp-content/uploads/sites/4/2017/10/garden-soil-type.jpg" alt="Light Soil" style="width:100px;height:100px;"></label><br><br>
 
     <!Insert question 3>
     <p class="Q3">Have you tested your soil for nutrients?</p><br>
-    <input type="radio" id="tested" name="soilTest" value="true">
+    <input type="radio" id="tested" name="test" value="true">
     <label for="tested">Yes</label><br>
-    <input type="radio" id="notTested" name="soilTest" value="false">
+    <input type="radio" id="notTested" name="test" value="false">
     <label for="notTested">No</label><br><br>
 
     <!Insert question 4>
@@ -508,18 +518,17 @@
 
     <!Insert question 6>
     <p class="Q6">Name your field!</p>
-    <input type="text" id="name" name="name"></input><br><br>
+    <input type="text" id="fieldName" name="fieldName"></input><br><br>
 
     <!Submit Button>
     <button class="submit" type="button" onclick="checkCorrectVariables()"><p class="submitText">Submit</p></button><br><br>
 
     <!Display Lands Button>
-    <button class="display"type="button" onclick="displayLands()"><p> Display Land</p></button><br><br>
+    <button class="display"type="button" onclick="displayLands()"><p class="displayText"> Display Land</p></button><br><br>
 
     <!The Output of the display>
     <div id="Lands Display" class="landsDisplay"></div>
 
-    <script src="script.js"></script>
     <!Insert footer>
     <div class="footer"></div>
   </body>
