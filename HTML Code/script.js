@@ -24,10 +24,10 @@ class PlotOfLand{
     this.width = width;
     this.soilType = soilType;
     this.soilColour = soilColour;
-    this.nContent = nContent;
-    this.pContent = pContent;
-    this.kContent = kContent;
-    this.pHLevel = pHLevel;
+    this.nContent = Math.round(nContent);
+    this.pContent = Math.round(pContent);
+    this.kContent = Math.round(kContent);
+    this.pHLevel = Math.round(pHLevel);
     this.soilTest = soilTest;
     this.currentCrop = currentCrop;
   };
@@ -98,6 +98,10 @@ class PlotOfLand{
     };
 
     return soilHealth
+  };
+  
+  calcExpectedYield(area=this.calcArea(), soilHealth=this.calcSoilHealth()){
+    return Math.round(area * (soilHealth/100))
   };
 };
 
@@ -182,30 +186,82 @@ function checkCorrectVariables(){
   var temporaryObject = createObject()
 
   if (isNaN(temporaryObject.width) || isNaN(temporaryObject.length)){
-    window.location.href = "newPlotError.html";
+    alert("Invalid Input. Make sure you have correctly put in correct variables.");
 
   }else if(!(typeof(temporaryObject.soilType) == "string") || !(typeof(temporaryObject.soilColour) == "string")){
-    alert(temporaryObject.soilType, temporaryObject.soilColour);
-    window.location.href = "newPlotError.html";
+    alert("Invalid Input. Make sure you have correctly put in correct variables.");
 
   }else if(temporaryObject.soilTest){
-    alert(temporaryObject.soilTest);
-    window.location.href = "newPlotError.html";
+    alert("Invalid Input. Make sure you have correctly put in correct variables.");
 
   }else{
     alert("Successfully Created New Plot Of Land")
     listOfLands.push(temporaryObject)
-    alert(listOfLands)
-    window.location.href = "myPlots.html"
   };
 };
 
 function displayLands(){
   var str = "<ul>"
   listOfLands.forEach(function(land){
-    str += '<div>' + land.name + "</div>";
-    str += "<div>" + land.calcSoilHealth() + "</div>";
-    str += "<div>" + land.currentCrop + "</div><br>";
+    str += '<div>Field Name: ' + land.name + "</div>";
+    str += "<div>Soil Health: " + land.calcSoilHealth() + "</div>";
+    str += "<div>Expected Yield " + land.calcExpectedYield() + " meters squared of produce</div>";
+    
+    if (land.calcSoilHealth() >= 80){
+      str += "<div>Congratulations you have sufficiently healthy soil. Keep up the good work by making sure you implement crop rotation properly (basic one: brassicas > roots > potato families > legumes). Also make sure to use organic compost.</div>"
+    }else if(land.calcSoilHealth() < 80 && land.calcSoilHealth() > 50){
+      str += "<div>You have decently healthy soil, however you can improve upon it by following the following tips.</div>"
+      if (land.nContent < 30){
+        str +="<div>Recommended: It is recommended that you either plant legumes or cover plants like winter field beans or peas.</div>"
+      };
+      if (land.nContent > 50){
+        str += "<div>It is recommended NOT to plant root plants. Next plants should include kale, pac, choi, or mustards.</div>"
+      };
+      if (land.pContent < 30){
+        str += "<div>It is recommended that you add some organic compost in order to increase phosphorus Levels.</div>"
+      };
+      if (land.pContent > 50){
+        str += "<div>The level of Phosphorus is too high! Avoid using organic compost and use low phosphorus products like bone meal. Add iron and zinc supplements to the plants directly. Be careful with the proportions as they are harmful to the environment.</div>"
+      };
+      if (land.kContent < 40){
+        str += "<div> Potassium is a requirement for almost all plants. We recommend that you put potassium additives in the soil such as sulfate of potash or tomato feed.</div>"
+      };
+      if (land.kContent > 80){
+        str += "<div> In a high potassium environment it is recommended that you plant comfrey, woody ash, guano and most commonly potatoes as they thrive in these environments.</div>"
+      };
+      if (land.pHLevel > 7){
+        str += "<div>Having high pHLevel is very bad as a moderate pHLevel is essential. You should consider adding well decomposed compost instead of adding elemental sulfur, aluminum sulfate or sulfuric acid in order to naturally reduce it. This process is slower than artificial means however, but it results in a healthier environment overall.</div>"
+      };
+      if (land.pHLevel < 6){
+        str += "<div>Having a low pHlevel is very bad as a moderate pHLevel is essential. Consider adding substances with lime slowly overtime, or baking soda to your plants.</div>"
+      };
+    }else{
+      str += "<div>You're soil is very unhealthy. It is recommended to follow the following instructions and perhaps leave the field to recover using cover crops, slow supplemental provision over time, and constant monitoring ont he soil.</div>"
+      if (land.nContent < 30){
+        str +="<div>Recommended: It is recommended that you either plant legumes or cover plants like winter field beans or peas.</div>"
+      };
+      if (land.nContent > 50){
+        str += "<div>It is recommended NOT to plant root plants. Next plants should include kale, pac, choi, or mustards.</div>"
+      };
+      if (land.pContent < 30){
+        str += "<div>It is recommended that you add some organic compost in order to increase phosphorus Levels.</div>"
+      };
+      if (land.pContent > 50){
+        str += "<div>The level of Phosphorus is too high! Avoid using organic compost and use low phosphorus products like bone meal. Add iron and zinc supplements to the plants directly. Be careful with the proportions as they are harmful to the environment.</div>"
+      };
+      if (land.kContent < 40){
+        str += "<div> Potassium is a requirement for almost all plants. We recommend that you put potassium additives in the soil such as sulfate of potash or tomato feed.</div>"
+      };
+      if (land.kContent > 80){
+        str += "<div> In a high potassium environment it is recommended that you plant comfrey, woody ash, guano and most commonly potatoes as they thrive in these environments.</div>"
+      };
+      if (land.pHLevel > 7){
+        str += "<div>Having high pHLevel is very bad as a moderate pHLevel is essential. You should consider adding well decomposed compost instead of adding elemental sulfur, aluminum sulfate or sulfuric acid in order to naturally reduce it. This process is slower than artificial means however, but it results in a healthier environment overall.</div>"
+      };
+      if (land.pHLevel < 6){
+        str += "<div>Having a low pHlevel is very bad as a moderate pHLevel is essential. Consider adding substances with lime slowly overtime, or baking soda to your plants.</div>"
+      };
+    };
   });
 
   str += "</ul>";
@@ -217,5 +273,3 @@ function addInputBox(){
   str += "</input>"
   document.getElementById("Input Crop").innerHTML = str;
 };
-
-    
