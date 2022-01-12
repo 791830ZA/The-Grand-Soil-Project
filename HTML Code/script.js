@@ -268,8 +268,3 @@ function displayLands(){
   document.getElementById("Lands Display").innerHTML = str;
 };
 
-function addInputBox(){
-  var str = "<input type='text' name='pHLevel' id='pHLevel' placeholder='Input Name of Crop Here'></input><br><br>"
-  str += "</input>"
-  document.getElementById("Input Crop").innerHTML = str;
-};
